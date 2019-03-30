@@ -1,0 +1,67 @@
+1553540422a:1:{s:8:"meta.htm";a:7:{s:8:"fileName";s:8:"meta.htm";s:7:"content";s:1866:"[ProductPage servicio]
+slug = "{{ :slug }}"
+slug_required = 1
+
+[CategoryPage]
+slug = "{{ :slug }}"
+slug_required = 1
+==
+{% set s = servicio.get() %}
+{% set c = CategoryPage.get() %}
+{% if s.name %}
+<title>{{ s.name }} · Llajwa Marketplace</title>
+    <meta name="title" content="{{ s.name }} · Llajwa Marketplace"> 
+    <meta name="description" content="{{ s.preview_text }}">
+    <meta property="og:title" content="{{ s.name }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ this.page.baseFileName|app }}/{{s.slug}}" />
+    <meta property="og:image" content="{{ s.preview_image.path }}" />
+    <meta property="og:description" content="{{ s.preview_text }}" />
+{% elseif c.name %}
+<title>{{ c.name }} · Llajwa Marketplace</title>
+    <meta name="title" content="{{ c.name }} · Llajwa Marketplace"> 
+    <meta name="description" content="{{ c.preview_text }}">
+    <meta property="og:title" content="{{ c.name }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ this.page.baseFileName|app }}/{{c.slug}}" />
+    <meta property="og:image" content="{{ c.preview_image.path }}" />
+    <meta property="og:description" content="{{ c.preview_text }}" />
+{% else %}    
+<title>{{ this.page.title }} · Llajwa Marketplace</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta property="og:title" content="{{ this.page.meta_title }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{app}}" />
+    <meta property="og:image" content="https://marketplace.llajwa.club/themes/marketplace/assets/images/logo-oficial.png" />
+    <meta property="og:description" content="{{ this.page.meta_description }}" />
+{% endif %}";s:5:"mtime";i:1553530563;s:6:"markup";s:1746:"{% set s = servicio.get() %}
+{% set c = CategoryPage.get() %}
+{% if s.name %}
+<title>{{ s.name }} · Llajwa Marketplace</title>
+    <meta name="title" content="{{ s.name }} · Llajwa Marketplace"> 
+    <meta name="description" content="{{ s.preview_text }}">
+    <meta property="og:title" content="{{ s.name }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ this.page.baseFileName|app }}/{{s.slug}}" />
+    <meta property="og:image" content="{{ s.preview_image.path }}" />
+    <meta property="og:description" content="{{ s.preview_text }}" />
+{% elseif c.name %}
+<title>{{ c.name }} · Llajwa Marketplace</title>
+    <meta name="title" content="{{ c.name }} · Llajwa Marketplace"> 
+    <meta name="description" content="{{ c.preview_text }}">
+    <meta property="og:title" content="{{ c.name }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ this.page.baseFileName|app }}/{{c.slug}}" />
+    <meta property="og:image" content="{{ c.preview_image.path }}" />
+    <meta property="og:description" content="{{ c.preview_text }}" />
+{% else %}    
+<title>{{ this.page.title }} · Llajwa Marketplace</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta property="og:title" content="{{ this.page.meta_title }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{app}}" />
+    <meta property="og:image" content="https://marketplace.llajwa.club/themes/marketplace/assets/images/logo-oficial.png" />
+    <meta property="og:description" content="{{ this.page.meta_description }}" />
+{% endif %}";s:4:"code";N;s:20:"ProductPage servicio";a:2:{s:4:"slug";s:11:"{{ :slug }}";s:13:"slug_required";s:1:"1";}s:12:"CategoryPage";a:2:{s:4:"slug";s:11:"{{ :slug }}";s:13:"slug_required";s:1:"1";}}}

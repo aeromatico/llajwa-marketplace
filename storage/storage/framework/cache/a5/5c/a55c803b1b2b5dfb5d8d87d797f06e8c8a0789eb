@@ -1,0 +1,26 @@
+1553540422a:1:{s:17:"toggle-mobile.htm";a:6:{s:8:"fileName";s:17:"toggle-mobile.htm";s:7:"content";s:583:"==
+<div id="quickview-trigger"  class="menu-fab is-hidden-mobile">
+            <a class="hamburger-btn" href="javascript:void(0);">
+                <span class="menu-toggle">	
+                    <span class="icon-box-toggle"> 	
+                        <span class="rotate">
+                            <i class="icon-line-top"></i>
+                            <i class="icon-line-center"></i>
+                            <i class="icon-line-bottom"></i> 
+                        </span>
+                    </span>
+                </span>
+            </a>
+        </div>";s:5:"mtime";i:1553530563;s:6:"markup";s:580:"<div id="quickview-trigger"  class="menu-fab is-hidden-mobile">
+            <a class="hamburger-btn" href="javascript:void(0);">
+                <span class="menu-toggle">	
+                    <span class="icon-box-toggle"> 	
+                        <span class="rotate">
+                            <i class="icon-line-top"></i>
+                            <i class="icon-line-center"></i>
+                            <i class="icon-line-bottom"></i> 
+                        </span>
+                    </span>
+                </span>
+            </a>
+        </div>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

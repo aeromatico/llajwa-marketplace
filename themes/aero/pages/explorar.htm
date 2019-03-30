@@ -1,0 +1,77 @@
+title = "Explorar"
+url = "/explorar"
+layout = "master"
+meta_title = "Servicios digitales empresariales"
+meta_description = "Explora decenas de servicios, nuevos servicios todas las semanas"
+is_hidden = 0
+
+[ProductList]
+sorting = "no"
+==
+{% set servicios = ProductList.make().sort(ProductList.getSorting()).active() %}
+
+<header>
+{% partial 'menus/main' %} 
+</header>
+        <main class=app-content style="margin-top: 50px">
+            <div class="hero is-light is-bold">
+                <div class=hero-body>
+                    <div class=container>
+                        <div class="columns is-vcentered">
+                            <div class="column is-two-thirds">
+                                <h1 class="title animated fadeInLeft delay-1s"> Explorar </h1>
+                                <h2 class="subtitle animated fadeInRight delay-1s"> Descubre servicios empresariales. </h2> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <section class="section is-storyworlds has-background is-medium">
+                <div class=container>
+
+                    <nav class="breadcrumb has-arrow-separator animated fadeInLeft delay-2s" aria-label="breadcrumbs">
+                      <ul>
+                        <li><a href="{{app}}/?ref=breadcumb">Inicio</a></li>
+                        <li class="is-active"><a href="#" aria-current="page">Explorar</a></li>
+                      </ul>
+                    </nav>
+                            
+                    <div class=columns>
+                        <div class="column is-3 is-2-widescreen animated fadeIn delay-2s">
+                            {% partial 'sidebar' %}
+                        </div>
+                        <div class="column is-9 is-10-widescreen animated fadeInUp delay-3s">
+                            <div class="columns is-multiline" id=grid>
+                            
+                                {% if servicios.isNotEmpty() %}
+                                {% for s in servicios %}
+                                {% set extras = s.code|split(',') %}
+                                <div class="column is-6 is-4-widescreen is-flex" data-groups="[&quot;6-9&quot;]">
+                                    <div class="card is-storyworld">
+                                        <a class=card-header href="{{app}}/servicio/{{s.slug}}">
+                                            <div class="card-image"><img src="{{ s.preview_image.path }}" style="margin: 20%; width: 60%; height: auto"></div>
+                                        </a>
+                                        <div class=card-body>
+                                            <a href="{{app}}/servicio/{{s.slug}}">
+                                                <h2 class="title is-3"> {{ s.name }} </h3>
+                                            </a>
+                                            <div class=card-meta> <i class=icon-user></i>{{ s.category.name }}</div>
+                                            <div class=card-description>
+                                                <p>{{ s.preview_text }}</p>
+                                            </div>
+                                        </div>
+                                        <div class=card-footer> <a class="button is-link" href="{{app}}/servicio/{{s.slug}}" style="margin-right: 10px">Ver detalles</a> <a href="{{ s.offer.first().preview_text }}" target="_blank" class="button is-link is-outlined"> <span class="icon"> <i class="fas fa-shopping-cart"></i> </span> </a></div>                                                                                  
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                {% endif %}
+ 
+
+                                                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>

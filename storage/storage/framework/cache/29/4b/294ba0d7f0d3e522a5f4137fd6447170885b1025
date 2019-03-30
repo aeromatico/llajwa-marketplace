@@ -1,0 +1,172 @@
+1553540422a:1:{s:13:"coleccion.htm";a:11:{s:8:"fileName";s:13:"coleccion.htm";s:7:"content";s:4768:"title = "Colección de servicios"
+url = "/coleccion/:slug"
+layout = "portada"
+is_hidden = 0
+
+[CategoryPage]
+slug = "{{ :slug }}"
+slug_required = 1
+smart_url_check = 0
+
+[ProductList]
+sorting = "no"
+==
+{% set categoria = CategoryPage.get() %}
+{% set servicios = ProductList.make().sort(ProductList.getSorting()).active().category(categoria.id) %}
+
+<div class="section">
+    <!-- Container -->
+    <div class="container">
+    
+        <div class="columns category-header">
+            <div class="column is-10 is-offset-1 is-tablet-landscape-padded">
+                <!-- Title -->
+                <div class="category-title is-product-category">
+                    <h2>{{categoria.name}}</h2>
+                    <div class="category-icon is-hidden-mobile">
+                        <img src="{{ categoria.preview_image.path }}" style="opacity: 0.4">
+                    </div>
+                </div>
+    
+                <!-- Controls -->
+                <div class="listing-controls">
+                    <div class="layout-controls">
+                        <a href="{{app}}/coleccion/{{categoria.slug}}"><span class="is-active"><i data-feather="grid"></i></span></a>
+                        <a href="{{app}}/coleccion-lista/{{categoria.slug}}"><span><i data-feather="list"></i></span></a>
+                    </div>
+                    <!-- Sort -->
+                    <div class="sort-box">
+                      <div class="fb-like" data-href="https://www.facebook.com/LlajwaClub" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+                    </div>
+                </div>
+                <!-- /Controls -->
+    
+                <!-- Product grid -->
+                <div class="columns is-product-grid is-multiline">
+                
+                {% if servicios.isNotEmpty() %}
+                    {% for s in servicios %}
+                    {% set extras = s.code|split(',') %}
+                        <!-- Product -->
+                        <div class="column is-{{extras[1]}}">
+                            <div class="flat-card {{extras[2]}}">
+                                <!-- Product zoomable image -->
+                                <div class="{{extras[3]}}">
+                                    <a href="{{app}}/servicio/{{s.slug}}"><img src="{{ s.images[0].path }}" alt="{{s.name}}" style="border-radius: 300px;"></a>
+                                </div>
+                                <!-- Product meta -->
+                                <div class="product-info has-text-centered">
+                                    <a href="{{app}}/servicio/{{s.slug}}"><h3 class="product-name {{extras[4]}}">{{s.name}}</h3></a>
+                                    <p class="product-description">{{ s.preview_text }}</p>
+                                    <p class="product-price">
+                                    
+                                    {% if s.offer is not empty %} 
+                                    
+                                       {% if s.offer.first().price == 0 %} !Gratis! {% else %}<span class="is-size-7">{{ s.offer.first().currency }}</span> {{ s.offer.first().price }} {% endif %}<span class="value is-size-7 has-text-dark" style="font-weight: normal">/{{ s.offer.first().name }}</span>
+                                       {% endif %}
+                                    </p>
+                                </div>
+                                <!-- Product actions -->
+                                <div class="actions">
+                                    <div class="add"><a href="{{app}}/servicio/{{s.slug}}"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Comprar" data-placement="top"></i></a></div>
+                                    <div class="add"><a href="https://m.me/LlajwaClub" target="_blank"><i data-feather="message-square" class="has-simple-popover" data-content="Chat de consultas" data-placement="top"></i></a></div>
+                                </div>
+                                {% if extras[0] == 1 %}
+                                <div class="on-sale">
+                                    <i data-feather="tag" class="has-simple-popover" data-content="¡ En oferta hoy !" data-placement="top"></i>
+                                </div> 
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                    {% endfor %}
+                {% endif %}
+                    
+                </div>
+                <!-- /Product grid -->
+    
+            </div>
+        </div> 
+
+    </div>
+<!-- /Container -->
+</div>";s:5:"mtime";i:1553530563;s:6:"markup";s:4568:"{% set categoria = CategoryPage.get() %}
+{% set servicios = ProductList.make().sort(ProductList.getSorting()).active().category(categoria.id) %}
+
+<div class="section">
+    <!-- Container -->
+    <div class="container">
+    
+        <div class="columns category-header">
+            <div class="column is-10 is-offset-1 is-tablet-landscape-padded">
+                <!-- Title -->
+                <div class="category-title is-product-category">
+                    <h2>{{categoria.name}}</h2>
+                    <div class="category-icon is-hidden-mobile">
+                        <img src="{{ categoria.preview_image.path }}" style="opacity: 0.4">
+                    </div>
+                </div>
+    
+                <!-- Controls -->
+                <div class="listing-controls">
+                    <div class="layout-controls">
+                        <a href="{{app}}/coleccion/{{categoria.slug}}"><span class="is-active"><i data-feather="grid"></i></span></a>
+                        <a href="{{app}}/coleccion-lista/{{categoria.slug}}"><span><i data-feather="list"></i></span></a>
+                    </div>
+                    <!-- Sort -->
+                    <div class="sort-box">
+                      <div class="fb-like" data-href="https://www.facebook.com/LlajwaClub" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+                    </div>
+                </div>
+                <!-- /Controls -->
+    
+                <!-- Product grid -->
+                <div class="columns is-product-grid is-multiline">
+                
+                {% if servicios.isNotEmpty() %}
+                    {% for s in servicios %}
+                    {% set extras = s.code|split(',') %}
+                        <!-- Product -->
+                        <div class="column is-{{extras[1]}}">
+                            <div class="flat-card {{extras[2]}}">
+                                <!-- Product zoomable image -->
+                                <div class="{{extras[3]}}">
+                                    <a href="{{app}}/servicio/{{s.slug}}"><img src="{{ s.images[0].path }}" alt="{{s.name}}" style="border-radius: 300px;"></a>
+                                </div>
+                                <!-- Product meta -->
+                                <div class="product-info has-text-centered">
+                                    <a href="{{app}}/servicio/{{s.slug}}"><h3 class="product-name {{extras[4]}}">{{s.name}}</h3></a>
+                                    <p class="product-description">{{ s.preview_text }}</p>
+                                    <p class="product-price">
+                                    
+                                    {% if s.offer is not empty %} 
+                                    
+                                       {% if s.offer.first().price == 0 %} !Gratis! {% else %}<span class="is-size-7">{{ s.offer.first().currency }}</span> {{ s.offer.first().price }} {% endif %}<span class="value is-size-7 has-text-dark" style="font-weight: normal">/{{ s.offer.first().name }}</span>
+                                       {% endif %}
+                                    </p>
+                                </div>
+                                <!-- Product actions -->
+                                <div class="actions">
+                                    <div class="add"><a href="{{app}}/servicio/{{s.slug}}"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Comprar" data-placement="top"></i></a></div>
+                                    <div class="add"><a href="https://m.me/LlajwaClub" target="_blank"><i data-feather="message-square" class="has-simple-popover" data-content="Chat de consultas" data-placement="top"></i></a></div>
+                                </div>
+                                {% if extras[0] == 1 %}
+                                <div class="on-sale">
+                                    <i data-feather="tag" class="has-simple-popover" data-content="¡ En oferta hoy !" data-placement="top"></i>
+                                </div> 
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                    {% endfor %}
+                {% endif %}
+                    
+                </div>
+                <!-- /Product grid -->
+    
+            </div>
+        </div> 
+
+    </div>
+<!-- /Container -->
+</div>";s:4:"code";N;s:5:"title";s:23:"Colección de servicios";s:3:"url";s:16:"/coleccion/:slug";s:6:"layout";s:7:"portada";s:9:"is_hidden";s:1:"0";s:12:"CategoryPage";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:13:"slug_required";s:1:"1";s:15:"smart_url_check";s:1:"0";}s:11:"ProductList";a:1:{s:7:"sorting";s:2:"no";}}}

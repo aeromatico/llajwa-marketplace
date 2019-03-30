@@ -1,0 +1,5 @@
+1553540422a:1:{s:16:"micro-tienda.htm";a:8:{s:8:"fileName";s:16:"micro-tienda.htm";s:7:"content";s:150:"title = "Micro tienda"
+url = "/servicio/micro-tienda"
+is_hidden = 0
+==
+<meta http-equiv="refresh" content="0;URL='{{app}}/servicio/tiendas-llajwa'" />";s:5:"mtime";i:1553530563;s:6:"markup";s:79:"<meta http-equiv="refresh" content="0;URL='{{app}}/servicio/tiendas-llajwa'" />";s:4:"code";N;s:5:"title";s:12:"Micro tienda";s:3:"url";s:22:"/servicio/micro-tienda";s:9:"is_hidden";s:1:"0";}}

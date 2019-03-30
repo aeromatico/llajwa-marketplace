@@ -1,0 +1,173 @@
+1553962284a:1:{s:13:"coleccion.htm";a:12:{s:8:"fileName";s:13:"coleccion.htm";s:7:"content";s:5071:"title = "Colección"
+url = "/coleccion/:slug"
+layout = "master"
+meta_description = "Descubre las promociones de esta colección de servicios digitales"
+is_hidden = 0
+
+[ProductList]
+sorting = "no"
+
+[CategoryPage]
+slug = "{{ :slug }}"
+slug_required = 1
+smart_url_check = 0
+==
+{% set categoria = CategoryPage.get() %}
+{% set servicios = ProductList.make().sort(ProductList.getSorting()).active().category(categoria.id) %}
+
+<header class="">
+{% partial 'menus/main' %} 
+</header>
+        <main class=app-content style="margin-top: 50px">
+            <div class="hero is-light is-bold">
+                <div class=hero-body>
+                    <div class=container>
+                        <div class="columns is-vcentered">
+                            <div class="column is-two-thirds">
+                                <h1 class="title animated fadeInLeft delay-1s"> {{categoria.name}} </h1>
+                                <h2 class="subtitle animated fadeInUp delay-1s"> Servicios digitales de calidad </h2> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <section class="section is-storyworlds has-background is-medium">
+                <div class=container>
+                
+                    <nav class="breadcrumb has-arrow-separator animated fadeInLeft delay-2s" aria-label="breadcrumbs">
+                      <ul>
+                        <li><a href="{{app}}/?ref=breadcumb">Inicio</a></li>
+                        <li><a href="{{app}}/explorar">Explorar</a></li>
+                        <li class="is-active"><a aria-current="page">{{categoria.name}}</a></li>
+                      </ul>
+                    </nav>
+                    
+                    <div class=columns>
+                        <div class="column is-3 is-2-widescreen animated fadeIn delay-2s">
+                            {% partial 'sidebar' %}
+                        </div>
+                        <div class="column is-9 is-10-widescreen animated fadeInRight delay-3s">                            
+                            <div class="columns is-mobile  is-multiline">
+                            
+                                {% if servicios.isNotEmpty() %}
+                                {% for s in servicios %}
+                                {% set extras = s.code|split(',') %}
+                                
+                                  <div class="column is-4 has-text-right">
+                                      <a href="{{app}}/servicio/{{s.slug}}">
+                                        <img src="{{ s.preview_image.path }}" style="margin: 10% 30px 10% 0; width: 70%; height: auto;">
+                                      </a>
+                                  </div>
+                                  <div class="column is-8" style="margin: 10px 0; padding: 30px; background-color: white; border-radius: 20px; border: 1px solid rgb(219, 219, 219)">
+                                        
+                                            <a href="{{app}}/servicio/{{s.slug}}">
+                                                <h2 class="title is-size-2-fullhd is-size-2-widescreen is-size-3-desktop is-size-4-touch is-size-5-tablet is-size-5-mobile"> {{ s.name }} </h2>
+                                            </a>
+                                            <h2 class="subtitle">
+                                                {% if s.offer.first().price == 0 %} 
+                                                    ¡Gratis!
+                                                {% else %}
+                                                    Desde {{ s.offer.first().currency }} {{ s.offer.first().price }} /{{ s.offer.first().name }}
+                                                {% endif %}                                             
+                                            </h2>
+                                            <div>
+                                                <p>{{ s.preview_text }}</p>
+                                            </div>
+                                        
+                                        <div style="margin-top: 20%">                                      
+                                            <a class="button is-link" href="{{app}}/servicio/{{s.slug}}" style="margin-right: 10px">Detalles</a> <a href="{{ s.offer.first().preview_text }}" class="button is-link is-outlined"> <span class="icon"> <i class="fas fa-shopping-cart"></i> </span> </a>
+                                        </div>    
+                                  </div> 
+                                 
+                                
+                                {% endfor %}
+                                {% endif %}
+ 
+
+                                                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>";s:5:"mtime";i:1553881256;s:6:"markup";s:4797:"{% set categoria = CategoryPage.get() %}
+{% set servicios = ProductList.make().sort(ProductList.getSorting()).active().category(categoria.id) %}
+
+<header class="">
+{% partial 'menus/main' %} 
+</header>
+        <main class=app-content style="margin-top: 50px">
+            <div class="hero is-light is-bold">
+                <div class=hero-body>
+                    <div class=container>
+                        <div class="columns is-vcentered">
+                            <div class="column is-two-thirds">
+                                <h1 class="title animated fadeInLeft delay-1s"> {{categoria.name}} </h1>
+                                <h2 class="subtitle animated fadeInUp delay-1s"> Servicios digitales de calidad </h2> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <section class="section is-storyworlds has-background is-medium">
+                <div class=container>
+                
+                    <nav class="breadcrumb has-arrow-separator animated fadeInLeft delay-2s" aria-label="breadcrumbs">
+                      <ul>
+                        <li><a href="{{app}}/?ref=breadcumb">Inicio</a></li>
+                        <li><a href="{{app}}/explorar">Explorar</a></li>
+                        <li class="is-active"><a aria-current="page">{{categoria.name}}</a></li>
+                      </ul>
+                    </nav>
+                    
+                    <div class=columns>
+                        <div class="column is-3 is-2-widescreen animated fadeIn delay-2s">
+                            {% partial 'sidebar' %}
+                        </div>
+                        <div class="column is-9 is-10-widescreen animated fadeInRight delay-3s">                            
+                            <div class="columns is-mobile  is-multiline">
+                            
+                                {% if servicios.isNotEmpty() %}
+                                {% for s in servicios %}
+                                {% set extras = s.code|split(',') %}
+                                
+                                  <div class="column is-4 has-text-right">
+                                      <a href="{{app}}/servicio/{{s.slug}}">
+                                        <img src="{{ s.preview_image.path }}" style="margin: 10% 30px 10% 0; width: 70%; height: auto;">
+                                      </a>
+                                  </div>
+                                  <div class="column is-8" style="margin: 10px 0; padding: 30px; background-color: white; border-radius: 20px; border: 1px solid rgb(219, 219, 219)">
+                                        
+                                            <a href="{{app}}/servicio/{{s.slug}}">
+                                                <h2 class="title is-size-2-fullhd is-size-2-widescreen is-size-3-desktop is-size-4-touch is-size-5-tablet is-size-5-mobile"> {{ s.name }} </h2>
+                                            </a>
+                                            <h2 class="subtitle">
+                                                {% if s.offer.first().price == 0 %} 
+                                                    ¡Gratis!
+                                                {% else %}
+                                                    Desde {{ s.offer.first().currency }} {{ s.offer.first().price }} /{{ s.offer.first().name }}
+                                                {% endif %}                                             
+                                            </h2>
+                                            <div>
+                                                <p>{{ s.preview_text }}</p>
+                                            </div>
+                                        
+                                        <div style="margin-top: 20%">                                      
+                                            <a class="button is-link" href="{{app}}/servicio/{{s.slug}}" style="margin-right: 10px">Detalles</a> <a href="{{ s.offer.first().preview_text }}" class="button is-link is-outlined"> <span class="icon"> <i class="fas fa-shopping-cart"></i> </span> </a>
+                                        </div>    
+                                  </div> 
+                                 
+                                
+                                {% endfor %}
+                                {% endif %}
+ 
+
+                                                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>";s:4:"code";N;s:5:"title";s:10:"Colección";s:3:"url";s:16:"/coleccion/:slug";s:6:"layout";s:6:"master";s:16:"meta_description";s:66:"Descubre las promociones de esta colección de servicios digitales";s:9:"is_hidden";s:1:"0";s:11:"ProductList";a:1:{s:7:"sorting";s:2:"no";}s:12:"CategoryPage";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:13:"slug_required";s:1:"1";s:15:"smart_url_check";s:1:"0";}}}

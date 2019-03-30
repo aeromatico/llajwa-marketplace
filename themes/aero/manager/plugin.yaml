@@ -1,0 +1,20 @@
+plugin:
+    name: 'aero.manager::lang.plugin.name'
+    description: 'aero.manager::lang.plugin.description'
+    author: aero
+    icon: oc-icon-pencil-square-o
+    homepage: ''
+permissions:
+    managerEditor:
+        tab: Manager
+        label: Editor
+navigation:
+    manager:
+        label: Manager
+        url: aero/manager/editor/update/1
+        icon: icon-cube
+        sideMenu:
+            managerEditor:
+                label: Editor
+                url: aero/manager/editor/update/1
+                icon: icon-edit

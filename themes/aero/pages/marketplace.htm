@@ -1,0 +1,56 @@
+title = "Marketplace"
+url = "/"
+layout = "master"
+meta_title = "Explorar • Llajwa Club"
+meta_description = "Llajwa Marketplace distribuye servicio digitales de alta calidad creados y soportador por autores de tecnología expertos."
+is_hidden = 0
+
+[builderList editor]
+modelClass = "Aero\Manager\Models\Editor"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set e = editor.records[0] %}
+
+<section class="hero is-fullheight has-carousel">
+     <div class="hero-carousel carousel-animated carousel-animate-fade" data-autoplay="true">
+       <div class='carousel-container'>
+       
+         {% for c in e.slider %}
+         <div class='carousel-item has-background is-active'>
+           <img class="is-background" src="{{c.slide | media}}" alt="slide" />
+         </div>
+         {% endfor %}
+        
+       </div>
+       <div class="carousel-navigation is-overlay">
+         <div class="carousel-nav-left">
+           <i class="fa fa-chevron-left" aria-hidden="true"></i>
+         </div>
+         <div class="carousel-nav-right">
+           <i class="fa fa-chevron-right" aria-hidden="true"></i>
+         </div>
+       </div>
+     </div>
+     <div class="hero-head">
+        {% partial 'menus/main' %}       
+     </div>
+     <div class="hero-body has-text-centered" style="border: 1px solid white">     
+
+         <div class="column is-12">
+      
+             <div class="control has-text-centered">
+                 <img src="{{ 'assets/img/logo.png' | theme}}" class="animated tada delay-2s">   
+                 <br>
+                <a href="./explorar" class="button is-danger is-medium animated fadeInLeft delay-3s">Explorar</a> <a href="./coleccion/promociones" class="button is-danger is-outlined is-medium animated fadeInRight delay-3s">Promos</a>                 
+             </div>
+               
+         </div>
+    
+     </div>
+   </section>

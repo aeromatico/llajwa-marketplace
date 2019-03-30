@@ -1,0 +1,36 @@
+1553540422a:1:{s:16:"hosting-demo.htm";a:9:{s:8:"fileName";s:16:"hosting-demo.htm";s:7:"content";s:582:"title = "Hosting Demo"
+url = "/demo"
+layout = "portada"
+is_hidden = 0
+==
+<div class="background-caption">
+    <h1>HOSTING</h1>
+</div>
+
+<!-- Hero Caption -->
+<div class="hero-caption">
+    <h1>DEMO</h1>
+    <h2>ESTÁ ES UNA DEMOSTRACIÓN</h2>
+    <p>Algunas funciones están limitadas en la demostración.</p>
+    <br><br><br>
+    <p >
+        <b>Usuario:</b> demo · <b>Contraseña:</b> quieroprobarllajwa
+    </p>
+
+    <a href="https://www.llajwa.club:2083/" target="_blank" class="button big-button primary-button upper-button rounded raised">Ir al panel</a>
+</div>";s:5:"mtime";i:1553530563;s:6:"markup";s:509:"<div class="background-caption">
+    <h1>HOSTING</h1>
+</div>
+
+<!-- Hero Caption -->
+<div class="hero-caption">
+    <h1>DEMO</h1>
+    <h2>ESTÁ ES UNA DEMOSTRACIÓN</h2>
+    <p>Algunas funciones están limitadas en la demostración.</p>
+    <br><br><br>
+    <p >
+        <b>Usuario:</b> demo · <b>Contraseña:</b> quieroprobarllajwa
+    </p>
+
+    <a href="https://www.llajwa.club:2083/" target="_blank" class="button big-button primary-button upper-button rounded raised">Ir al panel</a>
+</div>";s:4:"code";N;s:5:"title";s:12:"Hosting Demo";s:3:"url";s:5:"/demo";s:6:"layout";s:7:"portada";s:9:"is_hidden";s:1:"0";}}

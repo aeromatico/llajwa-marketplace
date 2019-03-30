@@ -1,0 +1,121 @@
+1553540422a:1:{s:15:"menu-mobile.htm";a:6:{s:8:"fileName";s:15:"menu-mobile.htm";s:7:"content";s:2314:"[CategoryList]
+==
+{% set categorias = CategoryList.make().tree() %}
+
+<nav class="navbar mobile-navbar is-hidden-desktop is-hidden-tablet" aria-label="main navigation">
+    <!-- Brand -->
+    <div class="navbar-brand">
+        <a class="navbar-item" href="{{app}}/?ref=logo-mobile">
+            <img src="{{'assets/images/logo/logo.svg' | theme}}" alt="">
+        </a>
+
+        <!-- Sidebar mode toggler icon -->
+        <a id="sidebar-mode" class="navbar-item is-icon is-sidebar-toggler" href="javascript:void(0);">
+            <i data-feather="sidebar"></i>
+        </a>
+
+        <!-- Mobile menu toggler icon -->
+        <div class="navbar-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- Navbar mobile menu -->
+    <div class="navbar-menu">
+        <!-- Account -->
+        <div class="navbar-item has-dropdown">
+            <a href="account.html" class="navbar-link">
+                <img src="{{'assets/images/avatars/altvatar.png' | theme}}" alt=""> 
+                <span class="is-heading">Bienvenido, invitado</span> 
+            </a>
+
+            <!-- Mobile Dropdown -->
+            <div class="navbar-dropdown">
+                <a href="#" class="navbar-item is-flex">
+                    <span>Carrito</span>
+                    <!-- Number of items in Cart -->
+                    <span class="menu-badge">0</span>
+                </a>
+                <a href="{{app}}/ingresar" class="navbar-item">Ingresar</a>
+                <a href="{{app}}/ingresar" class="navbar-item">Registrarse</a>
+            </div>
+        </div>
+
+        <!-- More -->
+        <div class="navbar-item has-dropdown">
+            <a class="navbar-link">
+                <i data-feather="grid"></i>
+                <span class="is-heading">Colecciones</span>
+            </a>
+
+            <!-- Mobile Dropdown -->
+            <div class="navbar-dropdown">
+                {% if categorias.isNotEmpty() %}
+                    {% for c in categorias if c.product_count > 0 %}            
+                    <a href="{{app}}/coleccion/{{c.slug}}" class="navbar-item">{{c.name}}</a>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</nav>";s:5:"mtime";i:1553530563;s:6:"markup";s:2296:"{% set categorias = CategoryList.make().tree() %}
+
+<nav class="navbar mobile-navbar is-hidden-desktop is-hidden-tablet" aria-label="main navigation">
+    <!-- Brand -->
+    <div class="navbar-brand">
+        <a class="navbar-item" href="{{app}}/?ref=logo-mobile">
+            <img src="{{'assets/images/logo/logo.svg' | theme}}" alt="">
+        </a>
+
+        <!-- Sidebar mode toggler icon -->
+        <a id="sidebar-mode" class="navbar-item is-icon is-sidebar-toggler" href="javascript:void(0);">
+            <i data-feather="sidebar"></i>
+        </a>
+
+        <!-- Mobile menu toggler icon -->
+        <div class="navbar-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- Navbar mobile menu -->
+    <div class="navbar-menu">
+        <!-- Account -->
+        <div class="navbar-item has-dropdown">
+            <a href="account.html" class="navbar-link">
+                <img src="{{'assets/images/avatars/altvatar.png' | theme}}" alt=""> 
+                <span class="is-heading">Bienvenido, invitado</span> 
+            </a>
+
+            <!-- Mobile Dropdown -->
+            <div class="navbar-dropdown">
+                <a href="#" class="navbar-item is-flex">
+                    <span>Carrito</span>
+                    <!-- Number of items in Cart -->
+                    <span class="menu-badge">0</span>
+                </a>
+                <a href="{{app}}/ingresar" class="navbar-item">Ingresar</a>
+                <a href="{{app}}/ingresar" class="navbar-item">Registrarse</a>
+            </div>
+        </div>
+
+        <!-- More -->
+        <div class="navbar-item has-dropdown">
+            <a class="navbar-link">
+                <i data-feather="grid"></i>
+                <span class="is-heading">Colecciones</span>
+            </a>
+
+            <!-- Mobile Dropdown -->
+            <div class="navbar-dropdown">
+                {% if categorias.isNotEmpty() %}
+                    {% for c in categorias if c.product_count > 0 %}            
+                    <a href="{{app}}/coleccion/{{c.slug}}" class="navbar-item">{{c.name}}</a>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</nav>";s:4:"code";N;s:12:"CategoryList";a:0:{}}}

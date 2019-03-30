@@ -1,0 +1,11 @@
+name: Editor
+modelClass: Aero\Manager\Models\Editor
+form: $/aero/manager/models/editor/fields.yaml
+defaultRedirect: aero/manager/editor
+create:
+    redirect: 'aero/manager/editor/update/:id'
+    redirectClose: aero/manager/editor
+update:
+    redirect: aero/manager/editor/update/1
+    redirectClose: aero/manager/editor/update/1
+preview: {  }

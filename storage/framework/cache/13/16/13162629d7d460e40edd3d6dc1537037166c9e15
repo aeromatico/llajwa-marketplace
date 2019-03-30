@@ -1,0 +1,68 @@
+1553965112a:1:{s:10:"footer.htm";a:6:{s:8:"fileName";s:10:"footer.htm";s:7:"content";s:1934:"==
+{% if this.page.id != 'marketplace' %}
+<section class="section call-to-action is-primary has-text-centered" style="margin-top: 200px; background-color: #293347">
+  <div class="container is-narrow">
+    <div class="box">
+      <div class="columns level">
+        <div class="column level-item">
+          <h1 class="title">¿Eres creativo?</h1>
+        </div>
+        <div class="column level-item">
+          <p>Vende tus propios servicios digitales en <br>Llajwa Marketplace.</p>
+        </div>
+        <div class="column level-item"><a class="button is-link is-rounded is-medium" href="https://m.me/LlajwaClub">Contacta</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="section is-small has-text-centered" style="background-color: #293347">
+  <div class="container is-narrow"><a class="logo" href="https://www.llajwa.club"><img src="{{'assets/img/logo-llajwa-club-light.png' | theme}}" alt="Llajwa Club" style="width: 200px; height: auto"></a>
+    <div class="columns is-centered"> 
+      <div class="column">
+        <h1 class="title is-size-4-touch has-text-light">Avanzado un día a la vez.</h1>
+      </div>
+    </div>
+    <div class="social-icons">
+      <p class="field">
+      <a class="button is-medium" href="https://facebook.com/LlajwaClub" target="_blank"><span class="icon is-small"><i class="fab fa-facebook fa-fw"></i></span></a>
+      <a class="button is-medium" href="https://instagram.com/LlajwaClub" target="_blank"><span class="icon is-small"><i class="fab fa-instagram fa-fw"></i></span></a>
+      <a class="button is-medium" href="https://twitter.com/LlajwaClub" target="_blank"><span class="icon is-small"><i class="fab fa-twitter fa-fw"></i></span></a>
+    </div>
+    <div class="copyright">{{ "now"|date("Y") }} Llajwa Club®</div>
+    <div class="is-size-7">Hecho con <i class="fas fa-heart"></i>, hecho en Bolivia</div>
+  </div>
+</footer>
+ {% endif %}";s:5:"mtime";i:1553850188;s:6:"markup";s:1931:"{% if this.page.id != 'marketplace' %}
+<section class="section call-to-action is-primary has-text-centered" style="margin-top: 200px; background-color: #293347">
+  <div class="container is-narrow">
+    <div class="box">
+      <div class="columns level">
+        <div class="column level-item">
+          <h1 class="title">¿Eres creativo?</h1>
+        </div>
+        <div class="column level-item">
+          <p>Vende tus propios servicios digitales en <br>Llajwa Marketplace.</p>
+        </div>
+        <div class="column level-item"><a class="button is-link is-rounded is-medium" href="https://m.me/LlajwaClub">Contacta</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="section is-small has-text-centered" style="background-color: #293347">
+  <div class="container is-narrow"><a class="logo" href="https://www.llajwa.club"><img src="{{'assets/img/logo-llajwa-club-light.png' | theme}}" alt="Llajwa Club" style="width: 200px; height: auto"></a>
+    <div class="columns is-centered"> 
+      <div class="column">
+        <h1 class="title is-size-4-touch has-text-light">Avanzado un día a la vez.</h1>
+      </div>
+    </div>
+    <div class="social-icons">
+      <p class="field">
+      <a class="button is-medium" href="https://facebook.com/LlajwaClub" target="_blank"><span class="icon is-small"><i class="fab fa-facebook fa-fw"></i></span></a>
+      <a class="button is-medium" href="https://instagram.com/LlajwaClub" target="_blank"><span class="icon is-small"><i class="fab fa-instagram fa-fw"></i></span></a>
+      <a class="button is-medium" href="https://twitter.com/LlajwaClub" target="_blank"><span class="icon is-small"><i class="fab fa-twitter fa-fw"></i></span></a>
+    </div>
+    <div class="copyright">{{ "now"|date("Y") }} Llajwa Club®</div>
+    <div class="is-size-7">Hecho con <i class="fas fa-heart"></i>, hecho en Bolivia</div>
+  </div>
+</footer>
+ {% endif %}";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

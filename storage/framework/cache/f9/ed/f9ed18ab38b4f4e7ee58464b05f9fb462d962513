@@ -1,0 +1,247 @@
+1553965112a:1:{s:12:"servicio.htm";a:10:{s:8:"fileName";s:12:"servicio.htm";s:7:"content";s:6594:"title = "Servicio"
+url = "/servicio/:slug"
+layout = "master"
+is_hidden = 0
+
+[ProductPage servicio]
+slug = "{{ :slug }}"
+slug_required = 1
+smart_url_check = 0
+==
+{% set s = servicio.get() %}
+{% set servicios = ProductList.make().sort(ProductList.getSorting()).active() %}
+
+<header>
+{% partial 'menus/main' %} 
+</header>
+
+<main class=app-content style="margin-top: 50px">
+    <div class="hero is-light is-bold">
+        <div class=hero-body>
+            <div class=container>
+                <div class="columns is-vcentered">
+                    <div class="column is-7">
+                        <div class="columns is-mobile">
+                            <div class="column is-3 animated fadeInLeft delay-1s">
+                                <img src="{{ s.preview_image.path }}" alt="{{s.name}}" style="height: auto; width: 100%">
+                            </div>
+                            <div class="column is-9 animated fadeIn delay-2s">
+                                <h1 class="title is-size-1-fullhd is-size-2-widescreen is-size-3-desktop is-size-4-touch is-size-5-tablet is-size-5-mobile"> {{s.name}} </h1>
+                                <h2 class=subtitle> {{ s.category.name }} </h2>                                      
+                                                                        
+                                    <a href="{{ s.offer.first().preview_text }}" target="_blank" class="button is-medium is-link">Comprar </a>
+                                    
+                                    <div class="is-size-7" style="margin-top: 10px">
+                                    {% if s.offer.first().price == 0 %} 
+                                        ¡Gratis!
+                                    {% else %}
+                                        Desde {{ s.offer.first().currency }} {{ s.offer.first().price }} /{{ s.offer.first().name }}
+                                    {% endif %} 
+                                    </div>
+                            </div>
+                        </div>                                                                 
+                    </div>
+                    <div class="column is-5 has-text-centered animated flipInX delay-2s">
+                        {% if (s.code) %}
+                        <video loop controls="true"  style="width: 80%; height: auto; -webkit-box-shadow: 0px 0px 54px -2px rgba(51,51,51,1); -moz-box-shadow: 0px 0px 54px -2px rgba(51,51,51,1); box-shadow: 0px 0px 54px -2px rgba(51,51,51,1);" src='{{s.code}}' type='video/mp4'>&nbsp; Ups! tu navegador no soporta vídeos en HTML5.</video>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section class="section">
+        <div class="container">
+            <nav class="breadcrumb has-arrow-separator animated fadeInLeft delay-2s" aria-label="breadcrumbs">
+              <ul>
+                <li><a href="{{app}}/?ref=breadcumb">Inicio</a></li>
+                <li><a href="{{app}}/explorar">Explorar</a></li>
+                <li><a href="{{app}}/coleccion/{{ s.category.slug }}">{{ s.category.name }}</a></li>
+                <li class="is-active"><a href="#" aria-current="page">{{s.name}}</a></li>
+              </ul>
+            </nav>
+            <div class="columns is-desktop is-gapless is-multiline">
+                <div class="column is-8 animated fadeInUp delay-3s">
+                
+                    <div class="has-text-centered aeroText aeroMarginV100">
+                        {{ s.preview_text }}
+                    </div>
+                    
+                    <div class="is-divider" data-content="Descripción" style="width: 95%"></div>
+                    
+                    <div class="aeroMarginV100">
+                        {{ s.description | raw }}
+                    </div>
+                    
+                    <div>
+                    <h1 class="title is-3">Comentarios</h1>
+                    
+                    <div class="fb-comments" data-href="https://marketplace.llajwa.club/servicio/{{s.slug}}" data-numposts="10"></div>
+                    
+                    </div>
+
+                </div>
+                <div class="column is-4 animated fadeInRight delay-2s">
+                <h1 class="title is-3">Perfil</h1>
+                    <i class="fas fa-brain"></i> </b> {{s.brand.name}}<br><br>
+                    <i class="fas fa-external-link-alt"></i> </b> <a href="{{s.brand.slug}}" target="_blank">Sitio web del autor</a><br><br>                    
+                    <i class="fas fa-wrench"></i> <a href="">Solitar soporte técnico</a><br><br>
+                    <i class="fas fa-envelope"></i> master@llajwa.club<br><br><br>
+          
+                  
+                  <div class="has-textleft-left">  
+                        <a href="{{ s.offer.first().preview_text }}" target="_blank" class="button is-link is-outlined">
+                            <span class="icon">
+                              <i class="fas fa-shopping-cart"></i>
+                            </span>
+                            <span>comprar</span>
+                        </a>  
+                        <a href="https://m.me/LlajwaClub" target="_blank" class="button is-link">
+                            <span class="icon is-medium">
+                              <i class="fab fa-facebook-messenger"></i>
+                            </span>
+                        </a>
+                        <a href="https://wa.me/59177954277" target="_blank" class="button is-link">
+                            <span class="icon is-medium">
+                              <i class="fab fa-whatsapp"></i>
+                            </span>
+                        </a> 
+  
+                        <div class="is-size-7" style="margin-top: 10px">
+                        {% if s.offer.first().price == 0 %} 
+                            ¡Gratis!
+                        {% else %}
+                            Desde {{ s.offer.first().currency }} {{ s.offer.first().price }} /{{ s.offer.first().name }}
+                        {% endif %} 
+                        </div>
+                    </div>
+                    
+                    <div class="has-textleft-left">
+                        <div class="sharethis-inline-share-buttons"></div>
+                    </div>
+                </div>
+                         
+                
+            </div>
+        </div>
+    </section>
+<main>";s:5:"mtime";i:1553861616;s:6:"markup";s:6433:"{% set s = servicio.get() %}
+{% set servicios = ProductList.make().sort(ProductList.getSorting()).active() %}
+
+<header>
+{% partial 'menus/main' %} 
+</header>
+
+<main class=app-content style="margin-top: 50px">
+    <div class="hero is-light is-bold">
+        <div class=hero-body>
+            <div class=container>
+                <div class="columns is-vcentered">
+                    <div class="column is-7">
+                        <div class="columns is-mobile">
+                            <div class="column is-3 animated fadeInLeft delay-1s">
+                                <img src="{{ s.preview_image.path }}" alt="{{s.name}}" style="height: auto; width: 100%">
+                            </div>
+                            <div class="column is-9 animated fadeIn delay-2s">
+                                <h1 class="title is-size-1-fullhd is-size-2-widescreen is-size-3-desktop is-size-4-touch is-size-5-tablet is-size-5-mobile"> {{s.name}} </h1>
+                                <h2 class=subtitle> {{ s.category.name }} </h2>                                      
+                                                                        
+                                    <a href="{{ s.offer.first().preview_text }}" target="_blank" class="button is-medium is-link">Comprar </a>
+                                    
+                                    <div class="is-size-7" style="margin-top: 10px">
+                                    {% if s.offer.first().price == 0 %} 
+                                        ¡Gratis!
+                                    {% else %}
+                                        Desde {{ s.offer.first().currency }} {{ s.offer.first().price }} /{{ s.offer.first().name }}
+                                    {% endif %} 
+                                    </div>
+                            </div>
+                        </div>                                                                 
+                    </div>
+                    <div class="column is-5 has-text-centered animated flipInX delay-2s">
+                        {% if (s.code) %}
+                        <video loop controls="true"  style="width: 80%; height: auto; -webkit-box-shadow: 0px 0px 54px -2px rgba(51,51,51,1); -moz-box-shadow: 0px 0px 54px -2px rgba(51,51,51,1); box-shadow: 0px 0px 54px -2px rgba(51,51,51,1);" src='{{s.code}}' type='video/mp4'>&nbsp; Ups! tu navegador no soporta vídeos en HTML5.</video>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section class="section">
+        <div class="container">
+            <nav class="breadcrumb has-arrow-separator animated fadeInLeft delay-2s" aria-label="breadcrumbs">
+              <ul>
+                <li><a href="{{app}}/?ref=breadcumb">Inicio</a></li>
+                <li><a href="{{app}}/explorar">Explorar</a></li>
+                <li><a href="{{app}}/coleccion/{{ s.category.slug }}">{{ s.category.name }}</a></li>
+                <li class="is-active"><a href="#" aria-current="page">{{s.name}}</a></li>
+              </ul>
+            </nav>
+            <div class="columns is-desktop is-gapless is-multiline">
+                <div class="column is-8 animated fadeInUp delay-3s">
+                
+                    <div class="has-text-centered aeroText aeroMarginV100">
+                        {{ s.preview_text }}
+                    </div>
+                    
+                    <div class="is-divider" data-content="Descripción" style="width: 95%"></div>
+                    
+                    <div class="aeroMarginV100">
+                        {{ s.description | raw }}
+                    </div>
+                    
+                    <div>
+                    <h1 class="title is-3">Comentarios</h1>
+                    
+                    <div class="fb-comments" data-href="https://marketplace.llajwa.club/servicio/{{s.slug}}" data-numposts="10"></div>
+                    
+                    </div>
+
+                </div>
+                <div class="column is-4 animated fadeInRight delay-2s">
+                <h1 class="title is-3">Perfil</h1>
+                    <i class="fas fa-brain"></i> </b> {{s.brand.name}}<br><br>
+                    <i class="fas fa-external-link-alt"></i> </b> <a href="{{s.brand.slug}}" target="_blank">Sitio web del autor</a><br><br>                    
+                    <i class="fas fa-wrench"></i> <a href="">Solitar soporte técnico</a><br><br>
+                    <i class="fas fa-envelope"></i> master@llajwa.club<br><br><br>
+          
+                  
+                  <div class="has-textleft-left">  
+                        <a href="{{ s.offer.first().preview_text }}" target="_blank" class="button is-link is-outlined">
+                            <span class="icon">
+                              <i class="fas fa-shopping-cart"></i>
+                            </span>
+                            <span>comprar</span>
+                        </a>  
+                        <a href="https://m.me/LlajwaClub" target="_blank" class="button is-link">
+                            <span class="icon is-medium">
+                              <i class="fab fa-facebook-messenger"></i>
+                            </span>
+                        </a>
+                        <a href="https://wa.me/59177954277" target="_blank" class="button is-link">
+                            <span class="icon is-medium">
+                              <i class="fab fa-whatsapp"></i>
+                            </span>
+                        </a> 
+  
+                        <div class="is-size-7" style="margin-top: 10px">
+                        {% if s.offer.first().price == 0 %} 
+                            ¡Gratis!
+                        {% else %}
+                            Desde {{ s.offer.first().currency }} {{ s.offer.first().price }} /{{ s.offer.first().name }}
+                        {% endif %} 
+                        </div>
+                    </div>
+                    
+                    <div class="has-textleft-left">
+                        <div class="sharethis-inline-share-buttons"></div>
+                    </div>
+                </div>
+                         
+                
+            </div>
+        </div>
+    </section>
+<main>";s:4:"code";N;s:5:"title";s:8:"Servicio";s:3:"url";s:15:"/servicio/:slug";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:20:"ProductPage servicio";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:13:"slug_required";s:1:"1";s:15:"smart_url_check";s:1:"0";}}}

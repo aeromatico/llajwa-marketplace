@@ -1,0 +1,37 @@
+==
+<nav class="navbar is-danger animated fadeIn is-fixed-top">
+    <div class="container">
+      <div class="navbar-brand">
+        {% if this.page.id != 'marketplace' %}
+        <a class="navbar-item" href="{{app}}/explorar">
+          <img src="{{ 'assets/img/logo-marketplace.png' | theme}}" alt="Logo">
+        </a>
+        {% endif %}
+        <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenuHeroA" class="navbar-menu">
+        <div class="navbar-end">
+        {% if this.page.id != 'marketplace' %}
+          <a href="{{app}}/?ref=menu" class="navbar-item has-text-white ">
+            Inicio
+          </a>
+        {% endif %}
+          <a href="{{app}}/explorar" class="navbar-item has-text-white ">
+            Explorar
+          </a>
+          <span class="navbar-item has-text-white">
+            <a href="https://m.me/LlajwaClub" target="_blank" class="button is-danger is-inverted is-outlined">
+              <span class="icon">
+                <i class="far fa-comment"></i>
+              </span>
+              <span>Iniciar chat</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>

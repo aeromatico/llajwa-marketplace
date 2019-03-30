@@ -1,0 +1,564 @@
+1553540422a:1:{s:12:"servicio.htm";a:11:{s:8:"fileName";s:12:"servicio.htm";s:7:"content";s:12585:"title = "Servicio"
+url = "/servicio/:slug"
+layout = "portada"
+is_hidden = 0
+
+[ProductPage servicio]
+slug = "{{ :slug }}"
+slug_required = 1
+smart_url_check = 0
+
+[ProductList]
+sorting = "no"
+==
+<?php
+function onStart()
+{  
+  $this['url_slug'] = $this->param('slug');
+}
+?>
+==
+{% set s = servicio.get() %}
+<!-- Left product panel -->
+<div class="product-panel">
+   <!-- Left Header -->
+   <div class="panel-header">
+      <div class="likes">
+         <span>
+            <div class="fb-like" data-href="https://www.facebook.com/LlajwaClub" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+         </span>
+      </div>
+   </div>
+   <!-- Product image -->
+   <div id="product-view" class="product-image translateLeft  is-hidden">
+      {% if s.images[1] is not empty %}
+      <img src="{{ s.images[1].path }}" data-action="zoom" alt="" style="border-radius: 200px">
+      {% else %}
+      En este momento no existen promociones<br>activas para este servicio.
+      {% endif %}    
+   </div>
+   <!-- Product details -->
+   <div id="meta-view" class="translateLeft">
+      <!-- Product description -->
+      <div class="detailed-description">
+         <div class="meta-block has-text-centered">
+            {% if s.preview_image %}
+            <img src="{{ s.preview_image.path }}" alt="{{s.name}}" style="width: 50%; height: auto">
+            {% else %}
+            <h3 class="product-name">{{s.name}}</h3>
+            {% endif %}  
+            <p>{{ s.category.name }}</p>
+         </div>
+         <!-- Product long description -->
+         <div class="meta-block">
+{% if s.slug == 'radio-virtual' %}         
+         <div align="center">
+
+<script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
+<script type="text/javascript">
+MRP.insert({
+'url':'http://stm1.srvstm.net:7018/;',
+'codec':'mp3',
+'volume':100,
+'autoplay':true,
+'forceHTML5':true,
+'jsevents':false,
+'buffering':0,
+'title':'Web Radio',
+'wmode':'transparent',
+'skin':'abrahadabra2',
+'width':100,
+'height':141
+});
+</script>  
+
+
+         </div>
+         
+         {% endif %}
+         
+         
+            <h3 class="spaced">Descripción de servicio</h3>
+            <p class="spaced">{{ s.description | raw }}</p>
+         </div>
+      </div>
+   </div>
+   <!-- Product Ratings -->
+   <div id="ratings-view" class="translateLeft is-hidden">
+      <div class="product-ratings">
+         <div class="main-rating">
+            <!-- Average Rating -->
+            <h3>Product Rating</h3>
+            <div class="stars">
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star-half"></i>
+            </div>
+            <span>Rated <small>4,5/5</small> out of <small>29</small> reviews</span>
+            <span class="add-review modal-trigger" data-modal="review-modal"><i data-feather="plus"></i> Add review</span>
+         </div>
+         <!-- Customer reviews -->
+         <div class="customer-ratings">
+            <!-- Product review -->
+            <div class="media">
+               <div class="media-left">
+                  <figure class="image is-32x32">
+                     <img src="{{'assets/images/avatars.elie.html' | theme }}" alt="">
+                  </figure>
+               </div>
+               <div class="media-content">
+                  <p>
+                     <span>Elie Daniels</span>
+                     <small>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star-half"></i>
+                     </small>
+                     <br>
+                     <span class="rating-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.</span>
+                  </p>
+               </div>
+            </div>
+            <!-- Product review -->
+            <div class="media">
+               <div class="media-left">
+                  <figure class="image is-32x32">
+                     <img src="{{'assets/images/avatars/john.jpg' | theme }}" alt="">
+                  </figure>
+               </div>
+               <div class="media-content">
+                  <p>
+                     <span>John Smith</span>
+                     <small>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>alo
+                     </small>
+                     <br>
+                     <span class="rating-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas nullam.</span>
+                  </p>
+               </div>
+            </div>
+            <!-- Product review -->
+            <div class="media">
+               <div class="media-left">
+                  <figure class="image is-32x32">
+                     <img src="{{'assets/images/avatars/jane.jpg' | theme }}" alt="">
+                  </figure>
+               </div>
+               <div class="media-content">
+                  <p>
+                     <span>Marjory Cambell</span>
+                     <small>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star-half"></i>
+                     </small>
+                     <br>
+                     <span class="rating-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.</span>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- /Product Ratings -->
+   <!-- Product panel actions -->
+   <div class="product-actions">
+      <!-- Zoom Action -->
+      <div class="zoom-buttons">
+         <i data-feather="plus-circle" style="display: none"></i>
+         <i data-feather="minus-circle" style="display: none"></i>
+      </div>
+      <!-- Navigation icons -->
+      <div class="right-actions">
+         <!-- Descripción -->
+         <span id="show-meta" class="product-action is-active"><i data-feather="info"></i></span>
+         <!-- Product image panel -->
+         <span id="show-product" class="product-action"><i data-feather="tag"></i></span>
+         <!-- Product meta panel -->                                        
+      </div>
+   </div>
+</div>
+<!-- Right product panel -->
+<div class="product-info-panel">
+   <div class="inner-panel">
+      <div class="panel-header">
+         <!-- Title -->
+         <div class="category-title">
+            <img src="{{ s.category.preview_image.path }}" style="opacity: 0.4">
+            <h2>{{ s.category.name }}</h2>
+         </div>
+      </div>
+      <!-- Panel body -->
+      <div class="panel-body">
+         <!-- Product Meta -->
+         <h3 class="product-name">{{s.name}}</h3>
+         <p class="product-description">{{s.preview_text | raw}}</p>
+         <!-- Product controls -->
+         <div class="product-controls">
+            <!-- Price -->
+            {% if s.offer is not empty %} 
+            <div class="product-price">
+               <div class="heading">Precio</div>
+               <div class="value">                               
+                  {% if s.offer.first().price == 0 %} 
+                  !Gratis!
+                  {% else %}
+                  Desde <span class="value is-size-6" style="font-weight: normal">{{ s.offer.first().currency }}</span> {{ s.offer.first().price }}
+                  {% endif %}
+                  <span class="value is-size-6 has-text-dark" style="font-weight: normal">/{{ s.offer.first().name }}</span> <br>
+                  {% for c in s.offer.active %}
+                  {% if loop.index == 2 %} 
+                  <span class="value is-size-7 has-text-dark" style="font-weight: normal">Pague solo {{ c.currency }} {{ c.price }} /{{ c.name }} </span>
+                  {% endif %}                             
+                  {% endfor %}                               
+               </div>
+            </div>
+            {% endif %}
+            <!-- Quantity -->
+            <div class="product-quantity" style="display: none">
+               <div class="heading">Cantidad</div>
+               <div class="control">
+                  <input class="input is-rounded" type="number" value="1">
+               </div>
+            </div>
+            <!-- Add to Cart -->
+            <div class="add-to-cart">
+               <div class="heading is-vhidden">Contacte antes de comprar</div>
+
+               {% if s.category.name == 'Prototipos' %}
+               <a href="http://demo.prototipos.llajwa.host/{{url_slug}}" target="_blank"><button class="button big-button cart-button primary-button upper-button rounded is-bold raised" style="margin-top: 5px">Probar demo</button></a>
+               {% endif %} 
+               {% if s.slug == 'pimienta-pack' %}
+               <a href="http://demo.prototipos.llajwa.host/lupe" target="_blank"><button class="button big-button cart-button primary-button upper-button rounded is-bold raised" style="margin-top: 5px">Probar demo</button></a>
+               {% endif %} 
+               {% if s.slug == 'tiendas-llajwa' %}
+               <a href="http://store.llajwa.host/?ref=LlajwaFB" target="_blank"><button class="button big-button cart-button primary-button upper-button rounded is-bold raised" style="margin-top: 5px">Probar demo</button></a>
+               {% endif %} 
+               {% if s.slug == 'hosting-plus' or s.slug == 'hosting-pro' or s.slug == 'alojamiento-vip'  %}
+               <a href="{{app}}/demo"><button class="button big-button cart-button primary-button upper-button rounded is-bold raised" style="margin-top: 5px">Probar demo</button></a>
+               {% endif %} 
+               {% if s.slug == 'notificaciones-push' %}
+               <a href="https://www.llajwa.host/push" target="_blank"><button class="button big-button cart-button primary-button upper-button rounded is-bold raised" style="margin-top: 5px">Probar servicio</button></a>
+               {% endif %}                                 
+               <a href="{{ s.offer.first().preview_text }}"><button class="button big-button cart-button primary-button upper-button rounded is-bold raised" style="margin-top: 5px">Comprar</button></a>
+            </div>
+         </div>
+      </div>
+      <!-- Panel footer -->
+      <div class="panel-footer">
+         <div class="footer-inner">
+            <div class="recommended">OTROS SERVICIOS</div>
+            <!-- Recommended items -->
+            <div class="columns has-text-centered">
+               <div class="column"></div>
+               {% set relacionados = ProductList.make().sort(ProductList.getSorting()).active().category(s.category.id) %}
+               {% if relacionados.isNotEmpty() %}                                
+               {% for c in relacionados %}
+               {% if loop.index < 4 and c.id != s.id %}
+               <!-- Item -->
+               <div class="column is-3">
+                  <div class="featured-product">
+                     <div class="image">
+                        <a href="{{app}}/servicio/{{c.slug}}"><img src="{{ c.images[0].path }}" alt="" style="border-radius: 300px"></a>
+                     </div>
+                     <div class="product-info has-text-centered">
+                        <a href="{{app}}/servicio/{{c.slug}}">
+                           <h3 class="product-name">{{c.name}}</h3>
+                        </a>
+                        <p class="product-description">{{c.preview_text}}</p>
+                     </div>
+                  </div>
+               </div>
+               {%endif%}
+               {% endfor %}
+               {% endif %}
+               <div class="column"></div>
+            </div>
+         </div>
+      </div>
+      <!-- /Panel footer -->
+   </div>
+</div>
+<!-- /Right product panel -->";s:5:"mtime";i:1553530563;s:6:"markup";s:12309:"{% set s = servicio.get() %}
+<!-- Left product panel -->
+<div class="product-panel">
+   <!-- Left Header -->
+   <div class="panel-header">
+      <div class="likes">
+         <span>
+            <div class="fb-like" data-href="https://www.facebook.com/LlajwaClub" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+         </span>
+      </div>
+   </div>
+   <!-- Product image -->
+   <div id="product-view" class="product-image translateLeft  is-hidden">
+      {% if s.images[1] is not empty %}
+      <img src="{{ s.images[1].path }}" data-action="zoom" alt="" style="border-radius: 200px">
+      {% else %}
+      En este momento no existen promociones<br>activas para este servicio.
+      {% endif %}    
+   </div>
+   <!-- Product details -->
+   <div id="meta-view" class="translateLeft">
+      <!-- Product description -->
+      <div class="detailed-description">
+         <div class="meta-block has-text-centered">
+            {% if s.preview_image %}
+            <img src="{{ s.preview_image.path }}" alt="{{s.name}}" style="width: 50%; height: auto">
+            {% else %}
+            <h3 class="product-name">{{s.name}}</h3>
+            {% endif %}  
+            <p>{{ s.category.name }}</p>
+         </div>
+         <!-- Product long description -->
+         <div class="meta-block">
+{% if s.slug == 'radio-virtual' %}         
+         <div align="center">
+
+<script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
+<script type="text/javascript">
+MRP.insert({
+'url':'http://stm1.srvstm.net:7018/;',
+'codec':'mp3',
+'volume':100,
+'autoplay':true,
+'forceHTML5':true,
+'jsevents':false,
+'buffering':0,
+'title':'Web Radio',
+'wmode':'transparent',
+'skin':'abrahadabra2',
+'width':100,
+'height':141
+});
+</script>  
+
+
+         </div>
+         
+         {% endif %}
+         
+         
+            <h3 class="spaced">Descripción de servicio</h3>
+            <p class="spaced">{{ s.description | raw }}</p>
+         </div>
+      </div>
+   </div>
+   <!-- Product Ratings -->
+   <div id="ratings-view" class="translateLeft is-hidden">
+      <div class="product-ratings">
+         <div class="main-rating">
+            <!-- Average Rating -->
+            <h3>Product Rating</h3>
+            <div class="stars">
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star-half"></i>
+            </div>
+            <span>Rated <small>4,5/5</small> out of <small>29</small> reviews</span>
+            <span class="add-review modal-trigger" data-modal="review-modal"><i data-feather="plus"></i> Add review</span>
+         </div>
+         <!-- Customer reviews -->
+         <div class="customer-ratings">
+            <!-- Product review -->
+            <div class="media">
+               <div class="media-left">
+                  <figure class="image is-32x32">
+                     <img src="{{'assets/images/avatars.elie.html' | theme }}" alt="">
+                  </figure>
+               </div>
+               <div class="media-content">
+                  <p>
+                     <span>Elie Daniels</span>
+                     <small>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star-half"></i>
+                     </small>
+                     <br>
+                     <span class="rating-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.</span>
+                  </p>
+               </div>
+            </div>
+            <!-- Product review -->
+            <div class="media">
+               <div class="media-left">
+                  <figure class="image is-32x32">
+                     <img src="{{'assets/images/avatars/john.jpg' | theme }}" alt="">
+                  </figure>
+               </div>
+               <div class="media-content">
+                  <p>
+                     <span>John Smith</span>
+                     <small>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>alo
+                     </small>
+                     <br>
+                     <span class="rating-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas nullam.</span>
+                  </p>
+               </div>
+            </div>
+            <!-- Product review -->
+            <div class="media">
+               <div class="media-left">
+                  <figure class="image is-32x32">
+                     <img src="{{'assets/images/avatars/jane.jpg' | theme }}" alt="">
+                  </figure>
+               </div>
+               <div class="media-content">
+                  <p>
+                     <span>Marjory Cambell</span>
+                     <small>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star-half"></i>
+                     </small>
+                     <br>
+                     <span class="rating-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.</span>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- /Product Ratings -->
+   <!-- Product panel actions -->
+   <div class="product-actions">
+      <!-- Zoom Action -->
+      <div class="zoom-buttons">
+         <i data-feather="plus-circle" style="display: none"></i>
+         <i data-feather="minus-circle" style="display: none"></i>
+      </div>
+      <!-- Navigation icons -->
+      <div class="right-actions">
+         <!-- Descripción -->
+         <span id="show-meta" class="product-action is-active"><i data-feather="info"></i></span>
+         <!-- Product image panel -->
+         <span id="show-product" class="product-action"><i data-feather="tag"></i></span>
+         <!-- Product meta panel -->                                        
+      </div>
+   </div>
+</div>
+<!-- Right product panel -->
+<div class="product-info-panel">
+   <div class="inner-panel">
+      <div class="panel-header">
+         <!-- Title -->
+         <div class="category-title">
+            <img src="{{ s.category.preview_image.path }}" style="opacity: 0.4">
+            <h2>{{ s.category.name }}</h2>
+         </div>
+      </div>
+      <!-- Panel body -->
+      <div class="panel-body">
+         <!-- Product Meta -->
+         <h3 class="product-name">{{s.name}}</h3>
+         <p class="product-description">{{s.preview_text | raw}}</p>
+         <!-- Product controls -->
+         <div class="product-controls">
+            <!-- Price -->
+            {% if s.offer is not empty %} 
+            <div class="product-price">
+               <div class="heading">Precio</div>
+               <div class="value">                               
+                  {% if s.offer.first().price == 0 %} 
+                  !Gratis!
+                  {% else %}
+                  Desde <span class="value is-size-6" style="font-weight: normal">{{ s.offer.first().currency }}</span> {{ s.offer.first().price }}
+                  {% endif %}
+                  <span class="value is-size-6 has-text-dark" style="font-weight: normal">/{{ s.offer.first().name }}</span> <br>
+                  {% for c in s.offer.active %}
+                  {% if loop.index == 2 %} 
+                  <span class="value is-size-7 has-text-dark" style="font-weight: normal">Pague solo {{ c.currency }} {{ c.price }} /{{ c.name }} </span>
+                  {% endif %}                             
+                  {% endfor %}                               
+               </div>
+            </div>
+            {% endif %}
+            <!-- Quantity -->
+            <div class="product-quantity" style="display: none">
+               <div class="heading">Cantidad</div>
+               <div class="control">
+                  <input class="input is-rounded" type="number" value="1">
+               </div>
+            </div>
+            <!-- Add to Cart -->
+            <div class="add-to-cart">
+               <div class="heading is-vhidden">Contacte antes de comprar</div>
+
+               {% if s.category.name == 'Prototipos' %}
+               <a href="http://demo.prototipos.llajwa.host/{{url_slug}}" target="_blank"><button class="button big-button cart-button primary-button upper-button rounded is-bold raised" style="margin-top: 5px">Probar demo</button></a>
+               {% endif %} 
+               {% if s.slug == 'pimienta-pack' %}
+               <a href="http://demo.prototipos.llajwa.host/lupe" target="_blank"><button class="button big-button cart-button primary-button upper-button rounded is-bold raised" style="margin-top: 5px">Probar demo</button></a>
+               {% endif %} 
+               {% if s.slug == 'tiendas-llajwa' %}
+               <a href="http://store.llajwa.host/?ref=LlajwaFB" target="_blank"><button class="button big-button cart-button primary-button upper-button rounded is-bold raised" style="margin-top: 5px">Probar demo</button></a>
+               {% endif %} 
+               {% if s.slug == 'hosting-plus' or s.slug == 'hosting-pro' or s.slug == 'alojamiento-vip'  %}
+               <a href="{{app}}/demo"><button class="button big-button cart-button primary-button upper-button rounded is-bold raised" style="margin-top: 5px">Probar demo</button></a>
+               {% endif %} 
+               {% if s.slug == 'notificaciones-push' %}
+               <a href="https://www.llajwa.host/push" target="_blank"><button class="button big-button cart-button primary-button upper-button rounded is-bold raised" style="margin-top: 5px">Probar servicio</button></a>
+               {% endif %}                                 
+               <a href="{{ s.offer.first().preview_text }}"><button class="button big-button cart-button primary-button upper-button rounded is-bold raised" style="margin-top: 5px">Comprar</button></a>
+            </div>
+         </div>
+      </div>
+      <!-- Panel footer -->
+      <div class="panel-footer">
+         <div class="footer-inner">
+            <div class="recommended">OTROS SERVICIOS</div>
+            <!-- Recommended items -->
+            <div class="columns has-text-centered">
+               <div class="column"></div>
+               {% set relacionados = ProductList.make().sort(ProductList.getSorting()).active().category(s.category.id) %}
+               {% if relacionados.isNotEmpty() %}                                
+               {% for c in relacionados %}
+               {% if loop.index < 4 and c.id != s.id %}
+               <!-- Item -->
+               <div class="column is-3">
+                  <div class="featured-product">
+                     <div class="image">
+                        <a href="{{app}}/servicio/{{c.slug}}"><img src="{{ c.images[0].path }}" alt="" style="border-radius: 300px"></a>
+                     </div>
+                     <div class="product-info has-text-centered">
+                        <a href="{{app}}/servicio/{{c.slug}}">
+                           <h3 class="product-name">{{c.name}}</h3>
+                        </a>
+                        <p class="product-description">{{c.preview_text}}</p>
+                     </div>
+                  </div>
+               </div>
+               {%endif%}
+               {% endfor %}
+               {% endif %}
+               <div class="column"></div>
+            </div>
+         </div>
+      </div>
+      <!-- /Panel footer -->
+   </div>
+</div>
+<!-- /Right product panel -->";s:4:"code";s:71:"function onStart()
+{  
+  $this['url_slug'] = $this->param('slug');
+}";s:5:"title";s:8:"Servicio";s:3:"url";s:15:"/servicio/:slug";s:6:"layout";s:7:"portada";s:9:"is_hidden";s:1:"0";s:20:"ProductPage servicio";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:13:"slug_required";s:1:"1";s:15:"smart_url_check";s:1:"0";}s:11:"ProductList";a:1:{s:7:"sorting";s:2:"no";}}}

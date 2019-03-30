@@ -1,0 +1,263 @@
+1553540422a:1:{s:12:"rembolso.htm";a:10:{s:8:"fileName";s:12:"rembolso.htm";s:7:"content";s:4103:"title = "Formulario de rembolso"
+url = "/forms/reembolso"
+layout = "portada"
+is_hidden = 0
+
+[emptyForm rembolso]
+messages_success = "Hemos recibido su información, una vez completado el reembolso recibirá un correo de confirmación."
+messages_errors = "Hay un problema al enviar el formulario. Por favor envíe sus datos bancarios al correo master@llajwa.club"
+mail_enabled = 1
+mail_subject = "Solicitud de rembolso"
+mail_recipients[] = "aeromatico@gmail.com"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+==
+<?php
+function onStart()
+{
+   try {
+     // adapt your params and query
+     //$this['subcategorias'] = Aero\Manager\Models\Categorias::where('categoria_padre_id',$this->param('id'))->get();
+     if(Request::get('monto')):
+         $this['nombre'] = Request::get('nombre');
+         $this['monto'] = Request::get('monto');
+     endif;
+   } 
+   catch (ModelNotFoundException $ex) {
+     return Redirect::to('/404');  
+   }
+
+}
+?>
+==
+<!-- Hero Caption -->
+<div class="hero-caption is-fullheight">
+
+    <h2>FORMULARIO DE REMBOLSOS</h2>
+    
+<div class="columns is-mobile">
+  <div class="column is-one-third is-offset-one-third has-text-left">
+  
+  <form data-request="{{ rembolso }}::onFormSubmit">
+
+    {{ form_token() }}
+
+
+<div class="field">
+  <label class="label">Nombre completo del titular de la cuenta</label>
+  <div class="control">
+    <input class="input" name="Nombre" id="nombre" type="text" value="{{nombre}}" placeholder="Nombre completo" {% if nombre %} readonly {% endif %} required>
+  </div>
+</div>
+
+
+<div class="field">
+  <label class="label">Número de cédula de identidad</label>
+  <div class="control">
+    <input class="input has-text-right" name="CI" id="ci" type="number" placeholder="Número de cédula" required>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Número de cuenta bancaria</label>
+  <div class="control">
+    <input class="input has-text-right" name="Cuenta" id="cuenta" type="number" placeholder="Número de cuenta bancaria" required>
+  </div>
+</div>
+
+
+<div class="field">
+  <label class="label">Monto a rembolsar en bolivianos</label>
+  <div class="control">
+    <input class="input has-text-right" name="Monto" id="monto" type="number" value="{{monto}}" placeholder="Ingrese el monto en Bolivianos" {% if monto %} readonly{% endif %} required>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Banco</label>
+  <div class="control">
+    <div class="select">
+      <select name="Banco" id="banco">
+        <option>Banco de Crédito</option>
+        <option>Banco Nacional de Bolivia</option>
+        <option>Banco Mercantil</option>
+        <option>Banco BISA</option>
+        <option>Banco Union</option>	
+        <option>Banco Economico</option>	
+        <option>Banco Sol</option>	
+        <option>Banco Ganadero</option>	
+        <option>Banco FIE</option>	
+        <option>Banco Fortaleza</option>	
+        <option>Banco FASSIL</option>	
+        <option>Banco Prodem</option>	
+        <option>Banco Ecofuturo</option>	
+      </select>
+    </div>
+  </div>
+</div>
+
+
+<div class="field">
+  <label class="label">Sucursal de su cuenta bancaria</label>
+  <div class="control">
+     <div class="select">
+      <select name="Sucursal" id="sucursal">
+        <option>La Paz</option>
+        <option>Cochabamba</option>
+        <option>Santa Cruz</option>
+        <option>Oruro</option>
+        <option>Potosí</option>
+        <option>Chuquisaca</option>
+        <option>Tarija</option>
+        <option>Beni</option>
+        <option>Pando</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="field is-grouped">
+  <div class="control">
+    <button class="button is-link" type="submit">Enviar</button>
+  </div>
+  <div class="control">
+    <button class="button is-text">Restaurar</button>
+  </div>
+</div>    
+
+
+    <div id="{{ rembolso }}_forms_flash"></div>
+
+
+</form>
+  </div>
+</div>
+
+
+</div>";s:5:"mtime";i:1553530563;s:6:"markup";s:3036:"<!-- Hero Caption -->
+<div class="hero-caption is-fullheight">
+
+    <h2>FORMULARIO DE REMBOLSOS</h2>
+    
+<div class="columns is-mobile">
+  <div class="column is-one-third is-offset-one-third has-text-left">
+  
+  <form data-request="{{ rembolso }}::onFormSubmit">
+
+    {{ form_token() }}
+
+
+<div class="field">
+  <label class="label">Nombre completo del titular de la cuenta</label>
+  <div class="control">
+    <input class="input" name="Nombre" id="nombre" type="text" value="{{nombre}}" placeholder="Nombre completo" {% if nombre %} readonly {% endif %} required>
+  </div>
+</div>
+
+
+<div class="field">
+  <label class="label">Número de cédula de identidad</label>
+  <div class="control">
+    <input class="input has-text-right" name="CI" id="ci" type="number" placeholder="Número de cédula" required>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Número de cuenta bancaria</label>
+  <div class="control">
+    <input class="input has-text-right" name="Cuenta" id="cuenta" type="number" placeholder="Número de cuenta bancaria" required>
+  </div>
+</div>
+
+
+<div class="field">
+  <label class="label">Monto a rembolsar en bolivianos</label>
+  <div class="control">
+    <input class="input has-text-right" name="Monto" id="monto" type="number" value="{{monto}}" placeholder="Ingrese el monto en Bolivianos" {% if monto %} readonly{% endif %} required>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Banco</label>
+  <div class="control">
+    <div class="select">
+      <select name="Banco" id="banco">
+        <option>Banco de Crédito</option>
+        <option>Banco Nacional de Bolivia</option>
+        <option>Banco Mercantil</option>
+        <option>Banco BISA</option>
+        <option>Banco Union</option>	
+        <option>Banco Economico</option>	
+        <option>Banco Sol</option>	
+        <option>Banco Ganadero</option>	
+        <option>Banco FIE</option>	
+        <option>Banco Fortaleza</option>	
+        <option>Banco FASSIL</option>	
+        <option>Banco Prodem</option>	
+        <option>Banco Ecofuturo</option>	
+      </select>
+    </div>
+  </div>
+</div>
+
+
+<div class="field">
+  <label class="label">Sucursal de su cuenta bancaria</label>
+  <div class="control">
+     <div class="select">
+      <select name="Sucursal" id="sucursal">
+        <option>La Paz</option>
+        <option>Cochabamba</option>
+        <option>Santa Cruz</option>
+        <option>Oruro</option>
+        <option>Potosí</option>
+        <option>Chuquisaca</option>
+        <option>Tarija</option>
+        <option>Beni</option>
+        <option>Pando</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="field is-grouped">
+  <div class="control">
+    <button class="button is-link" type="submit">Enviar</button>
+  </div>
+  <div class="control">
+    <button class="button is-text">Restaurar</button>
+  </div>
+</div>    
+
+
+    <div id="{{ rembolso }}_forms_flash"></div>
+
+
+</form>
+  </div>
+</div>
+
+
+</div>";s:4:"code";s:432:"function onStart()
+{
+   try {
+     // adapt your params and query
+     //$this['subcategorias'] = Aero\Manager\Models\Categorias::where('categoria_padre_id',$this->param('id'))->get();
+     if(Request::get('monto')):
+         $this['nombre'] = Request::get('nombre');
+         $this['monto'] = Request::get('monto');
+     endif;
+   } 
+   catch (ModelNotFoundException $ex) {
+     return Redirect::to('/404');  
+   }
+
+}";s:5:"title";s:22:"Formulario de rembolso";s:3:"url";s:16:"/forms/reembolso";s:6:"layout";s:7:"portada";s:9:"is_hidden";s:1:"0";s:18:"emptyForm rembolso";a:11:{s:16:"messages_success";s:101:"Hemos recibido su información, una vez completado el reembolso recibirá un correo de confirmación.";s:15:"messages_errors";s:106:"Hay un problema al enviar el formulario. Por favor envíe sus datos bancarios al correo master@llajwa.club";s:12:"mail_enabled";s:1:"1";s:12:"mail_subject";s:21:"Solicitud de rembolso";s:15:"mail_recipients";a:1:{i:0;s:20:"aeromatico@gmail.com";}s:13:"inline_errors";s:8:"disabled";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";}}}

@@ -1,0 +1,26 @@
+1553540422a:1:{s:8:"push.htm";a:9:{s:8:"fileName";s:8:"push.htm";s:7:"content";s:494:"title = "Notificaciones Push"
+url = "/push"
+layout = "portada"
+is_hidden = 0
+==
+<div class="background-caption">
+    <h1>PUSH</h1>
+</div>
+
+<!-- Hero Caption -->
+<div class="hero-caption">
+    <h1>NOTIFICACIONES</h1>
+    <h2>ESTÁ ES UNA DEMOSTRACIÓN</h2>
+    <p>Gracias por interesarte en nuestro servicio, por favor sigue las instrucciones.</p>
+    <a href="https://www.llajwa.host/push" class="button big-button primary-button upper-button rounded raised">Iniciar prueba</a>
+</div>";s:5:"mtime";i:1553530563;s:6:"markup";s:414:"<div class="background-caption">
+    <h1>PUSH</h1>
+</div>
+
+<!-- Hero Caption -->
+<div class="hero-caption">
+    <h1>NOTIFICACIONES</h1>
+    <h2>ESTÁ ES UNA DEMOSTRACIÓN</h2>
+    <p>Gracias por interesarte en nuestro servicio, por favor sigue las instrucciones.</p>
+    <a href="https://www.llajwa.host/push" class="button big-button primary-button upper-button rounded raised">Iniciar prueba</a>
+</div>";s:4:"code";N;s:5:"title";s:19:"Notificaciones Push";s:3:"url";s:5:"/push";s:6:"layout";s:7:"portada";s:9:"is_hidden";s:1:"0";}}

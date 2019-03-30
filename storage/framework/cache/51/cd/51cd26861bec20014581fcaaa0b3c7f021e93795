@@ -1,0 +1,58 @@
+1553965112a:1:{s:10:"blanco.htm";a:9:{s:8:"fileName";s:10:"blanco.htm";s:7:"content";s:991:"title = "blanco"
+url = "/blanco"
+layout = "master"
+is_hidden = 0
+==
+<header>
+{% partial 'menus/main' %} 
+</header>
+
+<main class=app-content style="margin-top: 50px">
+    <div class="hero is-light is-bold">
+        <div class=hero-body>
+            <div class=container>
+                <div class="columns is-vcentered">
+                    <div class="column is-two-thirds">
+                        <h1 class=title> Explorar </h1>
+                        <h2 class=subtitle> ANS - Agencia de Noticias Soberanía del Trópico </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section class="section is-storyworlds has-background is-medium">
+        <div class=container>
+            <div class="columns is-mobile">
+                <div class="column is-8 aeroBlind">is-four-fifths</div>
+                <div class="column is-4 aeroBlind">Auto</div>
+            </div>
+        </div>
+    </section>
+<main>";s:5:"mtime";i:1553597058;s:6:"markup";s:923:"<header>
+{% partial 'menus/main' %} 
+</header>
+
+<main class=app-content style="margin-top: 50px">
+    <div class="hero is-light is-bold">
+        <div class=hero-body>
+            <div class=container>
+                <div class="columns is-vcentered">
+                    <div class="column is-two-thirds">
+                        <h1 class=title> Explorar </h1>
+                        <h2 class=subtitle> ANS - Agencia de Noticias Soberanía del Trópico </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section class="section is-storyworlds has-background is-medium">
+        <div class=container>
+            <div class="columns is-mobile">
+                <div class="column is-8 aeroBlind">is-four-fifths</div>
+                <div class="column is-4 aeroBlind">Auto</div>
+            </div>
+        </div>
+    </section>
+<main>";s:4:"code";N;s:5:"title";s:6:"blanco";s:3:"url";s:7:"/blanco";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";}}

@@ -1,0 +1,136 @@
+1553540422a:1:{s:8:"menu.htm";a:6:{s:8:"fileName";s:8:"menu.htm";s:7:"content";s:3065:"==
+<!-- Shop quickview -->
+        <div class="shop-quickview has-background-image" data-background="{{'assets/images/bg/sidebar.jpg' | theme}}">
+            <div class="inner">
+                <!-- Header -->
+                <div class="quickview-header">
+                    <h2> MENU</h2>
+                    <span id="close-shop-sidebar"><i data-feather="x"></i></span>
+                </div>
+                <!-- Shop menu -->
+                <ul class="shop-menu">
+                    <li>
+                        <a href="{{app}}/?ref=marketplace-menú">
+                            <span>Marketplace</span>
+                            <i data-feather="home"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.llajwa.club/?ref=marketplace" target="_blank">
+                            <span>Web</span>
+                            <i data-feather="tag"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/LlajwaClub">
+                            <span>Facebook</span>
+                            <i data-feather="facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{app}}/ingresar">
+                            <span>Mi cuenta</span>
+                            <i data-feather="user"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Profile image -->
+                <ul class="user-profile">
+                    <li>
+                        <a href="{{app}}/ingresar">
+                            <img src="{{'assets/images/avatars/altvatar.png' | theme}}" alt="">
+                            <span class="user">
+                                <span><small>Conectado como</small></span>                                
+                                <span>Invitado</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Cart quickview -->
+        <div class="cart-quickview">
+            <div class="inner">
+                <!-- Header -->
+                <div class="quickview-header">
+                    <h2>Checkout</h2>
+                    <span id="close-cart-sidebar"><i data-feather="x"></i></span>
+                </div>
+                <!-- Cart quickview body -->
+                <div class="cart-body">
+                    <div class="empty-cart has-text-centered">
+                        <h3>Su carrito está vacío</h3>
+                        <img src="{{'assets/images/icons/new-cart.svg' | theme}}" alt="">
+                        <a href="{{app}}/?rel=menu" class="button big-button rounded">Explorar</a>
+                        <small>Nuevos servicios cada semana</small>
+                    </div>
+                </div>
+            </div>
+        </div>";s:5:"mtime";i:1553530563;s:6:"markup";s:3062:"<!-- Shop quickview -->
+        <div class="shop-quickview has-background-image" data-background="{{'assets/images/bg/sidebar.jpg' | theme}}">
+            <div class="inner">
+                <!-- Header -->
+                <div class="quickview-header">
+                    <h2> MENU</h2>
+                    <span id="close-shop-sidebar"><i data-feather="x"></i></span>
+                </div>
+                <!-- Shop menu -->
+                <ul class="shop-menu">
+                    <li>
+                        <a href="{{app}}/?ref=marketplace-menú">
+                            <span>Marketplace</span>
+                            <i data-feather="home"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.llajwa.club/?ref=marketplace" target="_blank">
+                            <span>Web</span>
+                            <i data-feather="tag"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/LlajwaClub">
+                            <span>Facebook</span>
+                            <i data-feather="facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{app}}/ingresar">
+                            <span>Mi cuenta</span>
+                            <i data-feather="user"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Profile image -->
+                <ul class="user-profile">
+                    <li>
+                        <a href="{{app}}/ingresar">
+                            <img src="{{'assets/images/avatars/altvatar.png' | theme}}" alt="">
+                            <span class="user">
+                                <span><small>Conectado como</small></span>                                
+                                <span>Invitado</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Cart quickview -->
+        <div class="cart-quickview">
+            <div class="inner">
+                <!-- Header -->
+                <div class="quickview-header">
+                    <h2>Checkout</h2>
+                    <span id="close-cart-sidebar"><i data-feather="x"></i></span>
+                </div>
+                <!-- Cart quickview body -->
+                <div class="cart-body">
+                    <div class="empty-cart has-text-centered">
+                        <h3>Su carrito está vacío</h3>
+                        <img src="{{'assets/images/icons/new-cart.svg' | theme}}" alt="">
+                        <a href="{{app}}/?rel=menu" class="button big-button rounded">Explorar</a>
+                        <small>Nuevos servicios cada semana</small>
+                    </div>
+                </div>
+            </div>
+        </div>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

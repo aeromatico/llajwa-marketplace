@@ -1,0 +1,15 @@
+tabs:
+    fields:
+        slider:
+            label: Slider
+            prompt: 'New slide'
+            span: full
+            type: repeater
+            tab: 'Landing page'
+            form:
+                fields:
+                    slide:
+                        label: Slide
+                        span: auto
+                        mode: image
+                        type: mediafinder

@@ -1,0 +1,33 @@
+1553962284a:1:{s:13:"code/meta.htm";a:7:{s:8:"fileName";s:13:"code/meta.htm";s:7:"content";s:595:"[CategoryPage]
+slug = "{{ :slug }}"
+slug_required = 1
+smart_url_check = 0
+
+[ProductPage service]
+slug = "{{ :slug }}"
+slug_required = 1
+smart_url_check = 0
+==
+{% set s = service.get() %}
+{% set c = CategoryPage.get() %}
+{% if this.page.id == 'servicio' %}
+    {% set title = s.name %}
+{% elseif this.page.id == 'coleccion' %}
+    {% set title = c.name %}
+{% else %}
+    {% set title = this.page.title %}
+{% endif %}
+<title>{{ title }} • Llajwa Club</title>
+<meta name="description" content="{{ this.page.meta_description }}">
+<meta name="title" content="{{ this.page.meta_title }}">";s:5:"mtime";i:1553875438;s:6:"markup";s:436:"{% set s = service.get() %}
+{% set c = CategoryPage.get() %}
+{% if this.page.id == 'servicio' %}
+    {% set title = s.name %}
+{% elseif this.page.id == 'coleccion' %}
+    {% set title = c.name %}
+{% else %}
+    {% set title = this.page.title %}
+{% endif %}
+<title>{{ title }} • Llajwa Club</title>
+<meta name="description" content="{{ this.page.meta_description }}">
+<meta name="title" content="{{ this.page.meta_title }}">";s:4:"code";N;s:12:"CategoryPage";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:13:"slug_required";s:1:"1";s:15:"smart_url_check";s:1:"0";}s:19:"ProductPage service";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:13:"slug_required";s:1:"1";s:15:"smart_url_check";s:1:"0";}}}

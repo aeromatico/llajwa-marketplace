@@ -1,0 +1,10 @@
+id,match_type,target_type,from_scheme,from_url,to_scheme,to_url,cms_page,static_page,status_code,requirements,from_date,to_date,ignore_query_parameters
+2,placeholders,path_or_url,auto,/products/power-host,auto,https://marketplace.llajwa.club/servicio/hosting-plus,,,301,[],,,
+3,placeholders,cms_page,auto,/pages/llajwa-stores,auto,,explorar,,301,[],,,
+4,exact,path_or_url,auto,/pages/power-host,auto,https://marketplace.llajwa.club/servicio/hosting-plus,,,301,[],,,
+5,exact,cms_page,auto,/hosting-demo,auto,,hosting-demo,,301,,,,
+7,exact,cms_page,auto,/micro-tienda,auto,,micro-tienda,,301,,,,
+8,exact,cms_page,auto,/brief,auto,,/forms/reembolso,,301,,,,
+9,exact,cms_page,auto,/brief,auto,,rembolso,,301,,,,
+10,exact,path_or_url,auto,/servicio/radio,auto,https://marketplace.llajwa.club/servicio/radio-virtual,,,301,[],,,
+11,exact,cms_page,auto,/explorar/:slug,auto,,explorar,,301,,,,

@@ -1,0 +1,94 @@
+1553965112a:1:{s:15:"marketplace.htm";a:12:{s:8:"fileName";s:15:"marketplace.htm";s:7:"content";s:2027:"title = "Marketplace"
+url = "/"
+layout = "master"
+meta_title = "Explorar • Llajwa Club"
+meta_description = "Llajwa Marketplace distribuye servicio digitales de alta calidad creados y soportador por autores de tecnología expertos."
+is_hidden = 0
+
+[builderList editor]
+modelClass = "Aero\Manager\Models\Editor"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set e = editor.records[0] %}
+
+<section class="hero is-fullheight has-carousel">
+     <div class="hero-carousel carousel-animated carousel-animate-fade" data-autoplay="true">
+       <div class='carousel-container'>
+       
+         {% for c in e.slider %}
+         <div class='carousel-item has-background is-active'>
+           <img class="is-background" src="{{c.slide | media}}" alt="slide" />
+         </div>
+         {% endfor %}
+        
+       </div>
+       <div class="carousel-navigation is-overlay">
+         <div class="carousel-nav-left">
+           <i class="fa fa-chevron-left" aria-hidden="true"></i>
+         </div>
+         <div class="carousel-nav-right">
+           <i class="fa fa-chevron-right" aria-hidden="true"></i>
+         </div>
+       </div>
+     </div>
+     <div class="hero-head">
+        {% partial 'menus/main' %}       
+     </div>
+     <div class="hero-body has-text-centered" style="border: 1px solid white">     
+
+         <div class="column is-12">
+      
+             <div class="control has-text-centered">
+                 <img src="{{ 'assets/img/logo.png' | theme}}" class="animated tada delay-2s">   
+                 <br>
+                <a href="./explorar" class="button is-danger is-medium animated fadeInLeft delay-3s">Explorar</a> <a href="./coleccion/promociones" class="button is-danger is-outlined is-medium animated fadeInRight delay-3s">Promos</a>                 
+             </div>
+               
+         </div>
+    
+     </div>
+   </section>";s:5:"mtime";i:1553867768;s:6:"markup";s:1541:"{% set e = editor.records[0] %}
+
+<section class="hero is-fullheight has-carousel">
+     <div class="hero-carousel carousel-animated carousel-animate-fade" data-autoplay="true">
+       <div class='carousel-container'>
+       
+         {% for c in e.slider %}
+         <div class='carousel-item has-background is-active'>
+           <img class="is-background" src="{{c.slide | media}}" alt="slide" />
+         </div>
+         {% endfor %}
+        
+       </div>
+       <div class="carousel-navigation is-overlay">
+         <div class="carousel-nav-left">
+           <i class="fa fa-chevron-left" aria-hidden="true"></i>
+         </div>
+         <div class="carousel-nav-right">
+           <i class="fa fa-chevron-right" aria-hidden="true"></i>
+         </div>
+       </div>
+     </div>
+     <div class="hero-head">
+        {% partial 'menus/main' %}       
+     </div>
+     <div class="hero-body has-text-centered" style="border: 1px solid white">     
+
+         <div class="column is-12">
+      
+             <div class="control has-text-centered">
+                 <img src="{{ 'assets/img/logo.png' | theme}}" class="animated tada delay-2s">   
+                 <br>
+                <a href="./explorar" class="button is-danger is-medium animated fadeInLeft delay-3s">Explorar</a> <a href="./coleccion/promociones" class="button is-danger is-outlined is-medium animated fadeInRight delay-3s">Promos</a>                 
+             </div>
+               
+         </div>
+    
+     </div>
+   </section>";s:4:"code";N;s:5:"title";s:11:"Marketplace";s:3:"url";s:1:"/";s:6:"layout";s:6:"master";s:10:"meta_title";s:24:"Explorar • Llajwa Club";s:16:"meta_description";s:122:"Llajwa Marketplace distribuye servicio digitales de alta calidad creados y soportador por autores de tecnología expertos.";s:9:"is_hidden";s:1:"0";s:18:"builderList editor";a:8:{s:10:"modelClass";s:26:"Aero\Manager\Models\Editor";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}

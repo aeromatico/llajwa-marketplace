@@ -1,0 +1,45 @@
+1553540422a:1:{s:15:"colecciones.htm";a:6:{s:8:"fileName";s:15:"colecciones.htm";s:7:"content";s:806:"[CategoryList]
+==
+{% set colecciones = CategoryList.make().tree() %}
+
+<div class="category-quickview">
+    <div class="inner">
+        <ul class="category-menu">
+        {% if colecciones.isNotEmpty() %}
+            {% for c in colecciones if c.product_count > 0 %}         
+            <li>
+                <a href="{{app}}/coleccion/{{c.slug}}">
+                    <span>{{c.name}}</span> <img src="{{ c.preview_image.path }}" alt="{{c.name}}" style="opacity: 0.4">
+      </a>
+            </li>
+            {% endfor %}
+        {% endif %}                       
+        </ul>
+    
+        <!--div class="all-categories is-hidden-mobile">
+            <a href="products.html">Show all categories</a>
+            <div class="centered-divider"></div>
+        </div-->
+    </div>
+</div>";s:5:"mtime";i:1553530563;s:6:"markup";s:788:"{% set colecciones = CategoryList.make().tree() %}
+
+<div class="category-quickview">
+    <div class="inner">
+        <ul class="category-menu">
+        {% if colecciones.isNotEmpty() %}
+            {% for c in colecciones if c.product_count > 0 %}         
+            <li>
+                <a href="{{app}}/coleccion/{{c.slug}}">
+                    <span>{{c.name}}</span> <img src="{{ c.preview_image.path }}" alt="{{c.name}}" style="opacity: 0.4">
+      </a>
+            </li>
+            {% endfor %}
+        {% endif %}                       
+        </ul>
+    
+        <!--div class="all-categories is-hidden-mobile">
+            <a href="products.html">Show all categories</a>
+            <div class="centered-divider"></div>
+        </div-->
+    </div>
+</div>";s:4:"code";N;s:12:"CategoryList";a:0:{}}}

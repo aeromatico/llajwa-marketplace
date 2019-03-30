@@ -1,0 +1,118 @@
+1553540422a:1:{s:12:"explorar.htm";a:10:{s:8:"fileName";s:12:"explorar.htm";s:7:"content";s:3270:"title = "Explorar"
+url = "/explorar"
+layout = "portada"
+is_hidden = 0
+
+[CategoryList]
+==
+{% set categorias = CategoryList.make().tree() %}
+
+<div class="section">
+                <!-- Container -->
+                <div class="container">
+        
+                    <!-- Product Categories Grid -->
+                    <div class="columns category-header">
+                        <div class="column is-10 is-offset-1 is-tablet-landscape-padded">
+                            <!-- Title -->
+                            <div class="category-title no-border is-padded">
+                                <h2>EXPLORAR</h2>
+                                <img class="brand-filigrane" src="{{'assets/images/logo/nephos-greyscale.jpeg' | theme }}" alt="">
+                            </div>
+        
+                            <div class="is-categories-grid">
+                                <div class="columns is-multiline">
+                                
+                                {% if categorias.isNotEmpty() %}
+                                    {% for c in categorias if c.product_count > 0 %}
+                              
+                                            <!-- House Tile -->
+                                            <div class="column tile is-parent is-one-third">
+                                                <article class="tile is-child has-min-height has-background-image" data-background="{{ c.images[0].path }}" onClick="return true">
+                                                    <div class="tile-content">
+                                                        <h2 class="shop-category">{{c.name}}</h2>
+                                                        <div class="divider"></div>
+                                                        <p>{{ c.preview_text|raw }}</p>
+                                                        <p class="is-italic">{{ c.description|raw }}</p>
+                                                        <div class="products">
+                                                            
+                                                        </div>
+                                                        <a href="{{app}}/coleccion/{{c.slug}}" class="action">
+                                                            <span>Descubre</span> 
+                                                            <i data-feather="chevron-right"></i>
+                                                        </a>
+                                                    </div>
+                                                    <!-- Overlay -->
+                                                    <div class="tile-overlay"></div>
+                                                </article>
+                                            </div>
+
+                                    {% endfor %}
+                                {% endif %}                                    
+
+                                </div>
+                            </div>
+        
+        
+                        </div>
+                    </div> 
+                    <!-- /House products -->
+        
+                </div>
+                <!-- /Container -->
+            </div>";s:5:"mtime";i:1553530563;s:6:"markup";s:3181:"{% set categorias = CategoryList.make().tree() %}
+
+<div class="section">
+                <!-- Container -->
+                <div class="container">
+        
+                    <!-- Product Categories Grid -->
+                    <div class="columns category-header">
+                        <div class="column is-10 is-offset-1 is-tablet-landscape-padded">
+                            <!-- Title -->
+                            <div class="category-title no-border is-padded">
+                                <h2>EXPLORAR</h2>
+                                <img class="brand-filigrane" src="{{'assets/images/logo/nephos-greyscale.jpeg' | theme }}" alt="">
+                            </div>
+        
+                            <div class="is-categories-grid">
+                                <div class="columns is-multiline">
+                                
+                                {% if categorias.isNotEmpty() %}
+                                    {% for c in categorias if c.product_count > 0 %}
+                              
+                                            <!-- House Tile -->
+                                            <div class="column tile is-parent is-one-third">
+                                                <article class="tile is-child has-min-height has-background-image" data-background="{{ c.images[0].path }}" onClick="return true">
+                                                    <div class="tile-content">
+                                                        <h2 class="shop-category">{{c.name}}</h2>
+                                                        <div class="divider"></div>
+                                                        <p>{{ c.preview_text|raw }}</p>
+                                                        <p class="is-italic">{{ c.description|raw }}</p>
+                                                        <div class="products">
+                                                            
+                                                        </div>
+                                                        <a href="{{app}}/coleccion/{{c.slug}}" class="action">
+                                                            <span>Descubre</span> 
+                                                            <i data-feather="chevron-right"></i>
+                                                        </a>
+                                                    </div>
+                                                    <!-- Overlay -->
+                                                    <div class="tile-overlay"></div>
+                                                </article>
+                                            </div>
+
+                                    {% endfor %}
+                                {% endif %}                                    
+
+                                </div>
+                            </div>
+        
+        
+                        </div>
+                    </div> 
+                    <!-- /House products -->
+        
+                </div>
+                <!-- /Container -->
+            </div>";s:4:"code";N;s:5:"title";s:8:"Explorar";s:3:"url";s:9:"/explorar";s:6:"layout";s:7:"portada";s:9:"is_hidden";s:1:"0";s:12:"CategoryList";a:0:{}}}

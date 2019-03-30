@@ -1,0 +1,52 @@
+1553965112a:1:{s:18:"code/messenger.htm";a:6:{s:8:"fileName";s:18:"code/messenger.htm";s:7:"content";s:789:"==
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v3.2'
+    });
+  };
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="2086969601543519"
+  theme_color="#FF0000"
+  logged_in_greeting="Hola, ¿podemos ayudarte?"
+  logged_out_greeting="Hola, ¿podemos ayudarte?">
+</div>";s:5:"mtime";i:1553806996;s:6:"markup";s:786:"<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v3.2'
+    });
+  };
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="2086969601543519"
+  theme_color="#FF0000"
+  logged_in_greeting="Hola, ¿podemos ayudarte?"
+  logged_out_greeting="Hola, ¿podemos ayudarte?">
+</div>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

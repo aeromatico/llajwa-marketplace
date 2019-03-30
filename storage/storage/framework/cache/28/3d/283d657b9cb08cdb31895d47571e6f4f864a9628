@@ -1,0 +1,176 @@
+1553540422a:1:{s:12:"ingresar.htm";a:9:{s:8:"fileName";s:12:"ingresar.htm";s:7:"content";s:5932:"title = "Ingresar"
+url = "/ingresar"
+layout = "portada"
+is_hidden = 0
+==
+<div class="section">
+                <!-- Container -->
+                <div class="container">
+        
+                    <!-- Authentication Layout -->
+                    <div class="columns account-header is-auth">
+                        <div class="column is-10 is-offset-1 is-tablet-landscape-padded">
+                            <!-- Title -->
+                            <div class="auth-title">
+                                <h2>Marketplace</h2>
+                                <a href="{{app}}/?ref=ingresar" class="button feather-button is-small primary-button upper-button raised is-hidden-mobile">
+                                    <span>Ir a la portada</span>
+                                </a>
+                                <img class="brand-filigrane" src="{{'assets/images/logo/logo-gris.svg'}}" alt="">
+                            </div>
+                            <!-- Card -->
+                            <div class="flat-card is-auto is-auth-form">
+                                <div class="columns is-gapless is-flex-mobile">
+                                    <!-- Image Columns -->
+                                    <div class="column is-6 has-text-centered image-column is-padded">
+                                        <div class="store-wrapper">
+                                            <img src="{{'assets/images/logo/logo-light.svg' | theme}}" alt="">
+                                            <div class="title">
+                                                Llajwa Club
+                                            </div>
+                                            <div class="subtitle">Únete a nosotros</div>
+                                        </div>
+                                        <div class="nephos-overlay"></div>
+                                    </div>
+                                    <!-- Login/Register form -->
+                                    <div class="column is-6 is-mobile-padded">
+        
+                                        <div class="tabs-wrapper animated-tabs">
+                                            <!-- Tabs -->
+                                            <div class="tabs is-form-tabs">
+                                                <ul>
+                                                    <li class="is-active" data-tab="login"><a>ingresar</a></li>
+                                                    <li data-tab="register"><a>Registrar</a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- Login form -->
+                                            <div id="login" class="navtab-content is-active">
+                                                <form>
+                                                    <!-- Form Control -->
+                                                    <div class="control">
+                                                        <label class="auth-label">Email*</label>
+                                                        <input type="email" class="input" placeholder="">
+                                                    </div>
+                                                    <!-- Form Control -->
+                                                    <div class="control">
+                                                        <label class="auth-label">Contraseña*</label>
+                                                        <input type="password" class="input" placeholder="">
+                                                    </div>
+                                                    <!-- Form Control -->
+                                                    <div class="control">
+                                                        <label class="checkbox-wrap is-small">
+                                                            <input id="house" type="checkbox" class="d-checkbox" checked>
+                                                            <span></span>
+                                                            <small>¿Recordarme en este equipo?</small>
+                                                        </label>
+                                                    </div>
+                                                    <!-- Form Submit -->
+                                                    <div class="button-wrapper">
+                                                        <button type="submit" class="button feather-button is-small primary-button upper-button raised">
+                                                            <span>Iniciar sesión</span>
+                                                        </button>
+                                                        <a class="forgotten">Recordar contraseña</a>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <!-- Register form -->
+                                            <div id="register" class="navtab-content">
+                                                Nuevos registros están deshabilitados temporalmente.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /Login/Register form -->
+                                </div>
+                            </div>
+                            <!-- Card -->
+                        </div>
+                    </div>
+                    <!-- Authentication Layout -->
+                </div>
+                <!-- /Container -->
+            </div>";s:5:"mtime";i:1553530563;s:6:"markup";s:5859:"<div class="section">
+                <!-- Container -->
+                <div class="container">
+        
+                    <!-- Authentication Layout -->
+                    <div class="columns account-header is-auth">
+                        <div class="column is-10 is-offset-1 is-tablet-landscape-padded">
+                            <!-- Title -->
+                            <div class="auth-title">
+                                <h2>Marketplace</h2>
+                                <a href="{{app}}/?ref=ingresar" class="button feather-button is-small primary-button upper-button raised is-hidden-mobile">
+                                    <span>Ir a la portada</span>
+                                </a>
+                                <img class="brand-filigrane" src="{{'assets/images/logo/logo-gris.svg'}}" alt="">
+                            </div>
+                            <!-- Card -->
+                            <div class="flat-card is-auto is-auth-form">
+                                <div class="columns is-gapless is-flex-mobile">
+                                    <!-- Image Columns -->
+                                    <div class="column is-6 has-text-centered image-column is-padded">
+                                        <div class="store-wrapper">
+                                            <img src="{{'assets/images/logo/logo-light.svg' | theme}}" alt="">
+                                            <div class="title">
+                                                Llajwa Club
+                                            </div>
+                                            <div class="subtitle">Únete a nosotros</div>
+                                        </div>
+                                        <div class="nephos-overlay"></div>
+                                    </div>
+                                    <!-- Login/Register form -->
+                                    <div class="column is-6 is-mobile-padded">
+        
+                                        <div class="tabs-wrapper animated-tabs">
+                                            <!-- Tabs -->
+                                            <div class="tabs is-form-tabs">
+                                                <ul>
+                                                    <li class="is-active" data-tab="login"><a>ingresar</a></li>
+                                                    <li data-tab="register"><a>Registrar</a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- Login form -->
+                                            <div id="login" class="navtab-content is-active">
+                                                <form>
+                                                    <!-- Form Control -->
+                                                    <div class="control">
+                                                        <label class="auth-label">Email*</label>
+                                                        <input type="email" class="input" placeholder="">
+                                                    </div>
+                                                    <!-- Form Control -->
+                                                    <div class="control">
+                                                        <label class="auth-label">Contraseña*</label>
+                                                        <input type="password" class="input" placeholder="">
+                                                    </div>
+                                                    <!-- Form Control -->
+                                                    <div class="control">
+                                                        <label class="checkbox-wrap is-small">
+                                                            <input id="house" type="checkbox" class="d-checkbox" checked>
+                                                            <span></span>
+                                                            <small>¿Recordarme en este equipo?</small>
+                                                        </label>
+                                                    </div>
+                                                    <!-- Form Submit -->
+                                                    <div class="button-wrapper">
+                                                        <button type="submit" class="button feather-button is-small primary-button upper-button raised">
+                                                            <span>Iniciar sesión</span>
+                                                        </button>
+                                                        <a class="forgotten">Recordar contraseña</a>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <!-- Register form -->
+                                            <div id="register" class="navtab-content">
+                                                Nuevos registros están deshabilitados temporalmente.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /Login/Register form -->
+                                </div>
+                            </div>
+                            <!-- Card -->
+                        </div>
+                    </div>
+                    <!-- Authentication Layout -->
+                </div>
+                <!-- /Container -->
+            </div>";s:4:"code";N;s:5:"title";s:8:"Ingresar";s:3:"url";s:9:"/ingresar";s:6:"layout";s:7:"portada";s:9:"is_hidden";s:1:"0";}}

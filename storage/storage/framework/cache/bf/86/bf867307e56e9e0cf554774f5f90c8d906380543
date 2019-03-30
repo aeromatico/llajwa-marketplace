@@ -1,0 +1,28 @@
+1553540422a:1:{s:8:"push.htm";a:6:{s:8:"fileName";s:8:"push.htm";s:7:"content";s:391:"==
+{% if this.page.id == 'push' %}
+
+<link rel="manifest" href="{{'assets/push/manifest.json' | theme}}" />
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "089bfd28-0e05-4d27-89ac-d048deadbaf8",
+    });
+  });
+</script>
+
+{% endif %}";s:5:"mtime";i:1553530563;s:6:"markup";s:388:"{% if this.page.id == 'push' %}
+
+<link rel="manifest" href="{{'assets/push/manifest.json' | theme}}" />
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "089bfd28-0e05-4d27-89ac-d048deadbaf8",
+    });
+  });
+</script>
+
+{% endif %}";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

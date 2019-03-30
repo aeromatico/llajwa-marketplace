@@ -1,0 +1,72 @@
+1553965112a:1:{s:14:"menus/main.htm";a:6:{s:8:"fileName";s:14:"menus/main.htm";s:7:"content";s:1311:"==
+<nav class="navbar is-danger animated fadeIn is-fixed-top">
+    <div class="container">
+      <div class="navbar-brand">
+        {% if this.page.id != 'marketplace' %}
+        <a class="navbar-item" href="{{app}}/explorar">
+          <img src="{{ 'assets/img/logo-marketplace.png' | theme}}" alt="Logo">
+        </a>
+        {% endif %}
+        <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenuHeroA" class="navbar-menu">
+        <div class="navbar-end">
+        {% if this.page.id != 'marketplace' %}
+          <a href="{{app}}/?ref=menu" class="navbar-item has-text-white ">
+            Inicio
+          </a>
+        {% endif %}
+          <a href="{{app}}/explorar" class="navbar-item has-text-white ">
+            Explorar
+          </a>
+          <span class="navbar-item has-text-white">
+            <a href="https://m.me/LlajwaClub" target="_blank" class="button is-danger is-inverted is-outlined">
+              <span class="icon">
+                <i class="far fa-comment"></i>
+              </span>
+              <span>Iniciar chat</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>";s:5:"mtime";i:1553861148;s:6:"markup";s:1308:"<nav class="navbar is-danger animated fadeIn is-fixed-top">
+    <div class="container">
+      <div class="navbar-brand">
+        {% if this.page.id != 'marketplace' %}
+        <a class="navbar-item" href="{{app}}/explorar">
+          <img src="{{ 'assets/img/logo-marketplace.png' | theme}}" alt="Logo">
+        </a>
+        {% endif %}
+        <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenuHeroA" class="navbar-menu">
+        <div class="navbar-end">
+        {% if this.page.id != 'marketplace' %}
+          <a href="{{app}}/?ref=menu" class="navbar-item has-text-white ">
+            Inicio
+          </a>
+        {% endif %}
+          <a href="{{app}}/explorar" class="navbar-item has-text-white ">
+            Explorar
+          </a>
+          <span class="navbar-item has-text-white">
+            <a href="https://m.me/LlajwaClub" target="_blank" class="button is-danger is-inverted is-outlined">
+              <span class="icon">
+                <i class="far fa-comment"></i>
+              </span>
+              <span>Iniciar chat</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

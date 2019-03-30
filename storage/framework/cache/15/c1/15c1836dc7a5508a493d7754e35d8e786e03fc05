@@ -1,0 +1,40 @@
+1553965128a:1:{s:11:"sidebar.htm";a:7:{s:8:"fileName";s:11:"sidebar.htm";s:7:"content";s:1250:"[CategoryList]
+
+[CategoryPage]
+slug = "{{ :slug }}"
+slug_required = 1
+smart_url_check = 0
+==
+{% set categorias = CategoryList.make().tree() %}
+{% set categoria = CategoryPage.get() %}
+
+    <div class=menu>
+        <p class=menu-label> Colecciones </p>
+        <ul class=menu-list>
+            <li> <a data-action=filter data-group=2-4 href="{{app}}/explorar" {% if categoria.slug == '' %}style="font-weight: bolder" {% endif %}>{% if categoria.slug == '' %}<i class="fas fa-caret-right"></i> {% endif %} Todos</a> </li>
+            {% if categorias.isNotEmpty() %}
+            {% for c in categorias if c.product_count > 0 %}        
+            <li><a data-action=filter data-group=2-4 href="{{app}}/coleccion/{{c.slug}}" {% if categoria.slug == c.slug %} style="font-weight: bolder" {% endif %}>{% if categoria.slug == c.slug %}<i class="fas fa-caret-right"></i> {% endif %} {{c.name}}</a> </li>
+            {% endfor %}
+            {% endif %}            
+        </ul>
+        <div class="">
+            <div class="fb-like aeroMarginV50" data-href="https://facebook.com/LlajwaClub" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>        
+        </div>
+    </div>";s:5:"mtime";i:1553800186;s:6:"markup";s:1157:"{% set categorias = CategoryList.make().tree() %}
+{% set categoria = CategoryPage.get() %}
+
+    <div class=menu>
+        <p class=menu-label> Colecciones </p>
+        <ul class=menu-list>
+            <li> <a data-action=filter data-group=2-4 href="{{app}}/explorar" {% if categoria.slug == '' %}style="font-weight: bolder" {% endif %}>{% if categoria.slug == '' %}<i class="fas fa-caret-right"></i> {% endif %} Todos</a> </li>
+            {% if categorias.isNotEmpty() %}
+            {% for c in categorias if c.product_count > 0 %}        
+            <li><a data-action=filter data-group=2-4 href="{{app}}/coleccion/{{c.slug}}" {% if categoria.slug == c.slug %} style="font-weight: bolder" {% endif %}>{% if categoria.slug == c.slug %}<i class="fas fa-caret-right"></i> {% endif %} {{c.name}}</a> </li>
+            {% endfor %}
+            {% endif %}            
+        </ul>
+        <div class="">
+            <div class="fb-like aeroMarginV50" data-href="https://facebook.com/LlajwaClub" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>        
+        </div>
+    </div>";s:4:"code";N;s:12:"CategoryList";a:0:{}s:12:"CategoryPage";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:13:"slug_required";s:1:"1";s:15:"smart_url_check";s:1:"0";}}}

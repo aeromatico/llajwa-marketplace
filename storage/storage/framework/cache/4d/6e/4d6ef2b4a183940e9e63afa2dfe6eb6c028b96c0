@@ -1,0 +1,46 @@
+1553540422a:1:{s:11:"portada.htm";a:9:{s:8:"fileName";s:11:"portada.htm";s:7:"content";s:1213:"title = "Portada"
+url = "/"
+layout = "portada"
+is_hidden = 0
+==
+<!-- Background Caption -->
+            <div class="background-caption">
+                <h1>LLAJWA</h1>
+            </div>
+        
+            <!-- Hero Caption -->
+            <div class="hero-caption">
+                <h1>MARKETPLACE</h1>
+                <h2>SERVICIOS DIGITALES</h2>
+                <a href="./explorar" class="button big-button primary-button upper-button rounded raised">Explorar</a>
+            </div>
+        
+            <!-- Fullscreen Slick SLider -->
+            <div class="slider-wrapper">
+                <div class="fullscreen-slick">
+                    <div class="full-slide has-background-image" data-background="{{'assets/images/slide10.png' | theme}}"></div>
+                    <div class="full-slide has-background-image" data-background="{{'assets/images/slide11.png' | theme}}"></div>
+                    <div class="full-slide has-background-image" data-background="{{'assets/images/slide12.png' | theme}}"></div>
+                    <div class="full-slide has-background-image" data-background="{{'assets/images/slide-1.jpg' | theme}}"></div>
+                </div>
+            </div>";s:5:"mtime";i:1553530563;s:6:"markup";s:1149:"<!-- Background Caption -->
+            <div class="background-caption">
+                <h1>LLAJWA</h1>
+            </div>
+        
+            <!-- Hero Caption -->
+            <div class="hero-caption">
+                <h1>MARKETPLACE</h1>
+                <h2>SERVICIOS DIGITALES</h2>
+                <a href="./explorar" class="button big-button primary-button upper-button rounded raised">Explorar</a>
+            </div>
+        
+            <!-- Fullscreen Slick SLider -->
+            <div class="slider-wrapper">
+                <div class="fullscreen-slick">
+                    <div class="full-slide has-background-image" data-background="{{'assets/images/slide10.png' | theme}}"></div>
+                    <div class="full-slide has-background-image" data-background="{{'assets/images/slide11.png' | theme}}"></div>
+                    <div class="full-slide has-background-image" data-background="{{'assets/images/slide12.png' | theme}}"></div>
+                    <div class="full-slide has-background-image" data-background="{{'assets/images/slide-1.jpg' | theme}}"></div>
+                </div>
+            </div>";s:4:"code";N;s:5:"title";s:7:"Portada";s:3:"url";s:1:"/";s:6:"layout";s:7:"portada";s:9:"is_hidden";s:1:"0";}}

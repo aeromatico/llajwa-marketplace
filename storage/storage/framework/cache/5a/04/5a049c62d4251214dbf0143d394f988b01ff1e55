@@ -1,0 +1,215 @@
+1553540422a:1:{s:19:"coleccion-lista.htm";a:11:{s:8:"fileName";s:19:"coleccion-lista.htm";s:7:"content";s:6749:"title = "Colección de servicios"
+url = "/coleccion-lista/:slug"
+layout = "portada"
+is_hidden = 0
+
+[CategoryPage]
+slug = "{{ :slug }}"
+slug_required = 1
+
+[ProductList]
+sorting = "no"
+==
+{% set categoria = CategoryPage.get() %}
+{% set servicios = ProductList.make().sort(ProductList.getSorting()).active().category(categoria.id) %}
+
+            <div class="section">
+                <!-- Container -->
+                <div class="container">
+        
+                    <!-- House products -->
+                    <div class="columns category-header">
+                        <div class="column is-10 is-offset-1 is-tablet-landscape-padded">
+                            <!-- Title -->
+                            <div class="category-title is-product-category">
+                                <h2>{{categoria.name}}</h2>
+                                <div class="category-icon is-hidden-mobile">
+                                    <img src="{{ categoria.preview_image.path }}" style="opacity: 0.4">
+                                </div>
+                            </div>
+        
+                            <!-- Controls -->
+                            <div class="listing-controls">
+                                <div class="layout-controls">
+                                    <a href="{{app}}/coleccion/{{categoria.slug}}"><span><i data-feather="grid"></i></span></a>
+                                    <a href="{{app}}/coleccion-lista/{{categoria.slug}}"><span class="is-active"><i data-feather="list"></i></span></a>
+                                </div>
+                                <!-- Sort -->
+                                <div class="sort-box">
+                                    <div class="fb-like" data-href="https://www.facebook.com/LlajwaClub" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+                                </div>
+                            </div>
+                            <!-- /Controls -->
+        
+                            <!-- Product List -->
+                            <div class="columns is-product-list is-multiline">
+                                <div class="column is-12">
+                                    <ul>
+                                    
+                                        {% if servicios.isNotEmpty() %}
+                                            {% for s in servicios %}
+                                            {% set extras = s.code|split(',') %}                                    
+                                            <!-- Product -->
+                                            <li class="flat-card is-auto is-list-item">
+                                                <!-- Product image -->
+                                                <span class="image">
+                                                    <a href="{{app}}/servicio/{{s.slug}}"><img src="{{ s.images[0].path }}" alt="{{s.name}}" style="border-radius: 100px; width: 90px; height: auto"></a>
+                                                </span>
+                                                <!-- Product meta -->
+                                                <span class="product-info">
+                                                    <!-- Rating -->
+  <!--                                                   <span class="rating">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <small class="is-hidden-mobile">47 calificaciones</small>
+  </span> -->
+                                                    <!-- Meta -->
+                                                    <a href="{{app}}/servicio/{{s.slug}}"><span class="product-name">{{s.name}}</span></a>
+                                                    <span class="product-price">
+                                                        {% if s.offer.first().price == 0 %} !Gratis! {% else %}<span class="is-size-7">{{ s.offer.first().currency }}</span> {{ s.offer.first().price }} {% endif %}<span class="value is-size-7 has-text-dark" style="font-weight: normal">/{{ s.offer.first().name }}</span>
+                                                    </span>
+                                                </span>
+            
+                                                <!-- Abstract -->
+                                                <span class="product-abstract is-hidden-mobile">
+                                                    {{ s.preview_text }}
+                                                    <span class="view-more">
+                                                        <a href="{{app}}/servicio/{{s.slug}}">Ver detalles <i data-feather="chevron-right"></i></a>
+                                                    </span>
+                                                </span>
+            
+                                                <!-- Actions -->
+                                                <span class="actions">
+                                                    <span class="add"><a href="{{app}}/servicio/{{s.slug}}"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Comprar" data-placement="top"></i></a></span>
+                                                    <span class="add"><a href="https://m.me/LlajwaClub" target="_blank"><i data-feather="message-square" class="has-simple-popover" data-content="Chat de consultas" data-placement="top"></i></a></span>
+                                                </span>
+                                                
+                                                {% if extras[0] == 1 %}
+                                                <div class="on-sale">
+                                                    <i data-feather="tag" class="has-simple-popover" data-content="¡ En oferta hoy !" data-placement="top"></i>
+                                                </div>
+                                                {% endif %}
+                                            </li>
+                                            {% endfor %}    
+                                        {% endif %}
+
+                                    </ul>
+        
+                                </div>
+        
+                            </div>
+                            <!-- /Product list -->
+ 
+        
+                        </div>
+                    </div> 
+                    <!-- /House products -->
+        
+        
+                </div>
+                <!-- /Container -->
+            </div>";s:5:"mtime";i:1553530563;s:6:"markup";s:6563:"{% set categoria = CategoryPage.get() %}
+{% set servicios = ProductList.make().sort(ProductList.getSorting()).active().category(categoria.id) %}
+
+            <div class="section">
+                <!-- Container -->
+                <div class="container">
+        
+                    <!-- House products -->
+                    <div class="columns category-header">
+                        <div class="column is-10 is-offset-1 is-tablet-landscape-padded">
+                            <!-- Title -->
+                            <div class="category-title is-product-category">
+                                <h2>{{categoria.name}}</h2>
+                                <div class="category-icon is-hidden-mobile">
+                                    <img src="{{ categoria.preview_image.path }}" style="opacity: 0.4">
+                                </div>
+                            </div>
+        
+                            <!-- Controls -->
+                            <div class="listing-controls">
+                                <div class="layout-controls">
+                                    <a href="{{app}}/coleccion/{{categoria.slug}}"><span><i data-feather="grid"></i></span></a>
+                                    <a href="{{app}}/coleccion-lista/{{categoria.slug}}"><span class="is-active"><i data-feather="list"></i></span></a>
+                                </div>
+                                <!-- Sort -->
+                                <div class="sort-box">
+                                    <div class="fb-like" data-href="https://www.facebook.com/LlajwaClub" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+                                </div>
+                            </div>
+                            <!-- /Controls -->
+        
+                            <!-- Product List -->
+                            <div class="columns is-product-list is-multiline">
+                                <div class="column is-12">
+                                    <ul>
+                                    
+                                        {% if servicios.isNotEmpty() %}
+                                            {% for s in servicios %}
+                                            {% set extras = s.code|split(',') %}                                    
+                                            <!-- Product -->
+                                            <li class="flat-card is-auto is-list-item">
+                                                <!-- Product image -->
+                                                <span class="image">
+                                                    <a href="{{app}}/servicio/{{s.slug}}"><img src="{{ s.images[0].path }}" alt="{{s.name}}" style="border-radius: 100px; width: 90px; height: auto"></a>
+                                                </span>
+                                                <!-- Product meta -->
+                                                <span class="product-info">
+                                                    <!-- Rating -->
+  <!--                                                   <span class="rating">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <small class="is-hidden-mobile">47 calificaciones</small>
+  </span> -->
+                                                    <!-- Meta -->
+                                                    <a href="{{app}}/servicio/{{s.slug}}"><span class="product-name">{{s.name}}</span></a>
+                                                    <span class="product-price">
+                                                        {% if s.offer.first().price == 0 %} !Gratis! {% else %}<span class="is-size-7">{{ s.offer.first().currency }}</span> {{ s.offer.first().price }} {% endif %}<span class="value is-size-7 has-text-dark" style="font-weight: normal">/{{ s.offer.first().name }}</span>
+                                                    </span>
+                                                </span>
+            
+                                                <!-- Abstract -->
+                                                <span class="product-abstract is-hidden-mobile">
+                                                    {{ s.preview_text }}
+                                                    <span class="view-more">
+                                                        <a href="{{app}}/servicio/{{s.slug}}">Ver detalles <i data-feather="chevron-right"></i></a>
+                                                    </span>
+                                                </span>
+            
+                                                <!-- Actions -->
+                                                <span class="actions">
+                                                    <span class="add"><a href="{{app}}/servicio/{{s.slug}}"><i data-feather="shopping-cart" class="has-simple-popover" data-content="Comprar" data-placement="top"></i></a></span>
+                                                    <span class="add"><a href="https://m.me/LlajwaClub" target="_blank"><i data-feather="message-square" class="has-simple-popover" data-content="Chat de consultas" data-placement="top"></i></a></span>
+                                                </span>
+                                                
+                                                {% if extras[0] == 1 %}
+                                                <div class="on-sale">
+                                                    <i data-feather="tag" class="has-simple-popover" data-content="¡ En oferta hoy !" data-placement="top"></i>
+                                                </div>
+                                                {% endif %}
+                                            </li>
+                                            {% endfor %}    
+                                        {% endif %}
+
+                                    </ul>
+        
+                                </div>
+        
+                            </div>
+                            <!-- /Product list -->
+ 
+        
+                        </div>
+                    </div> 
+                    <!-- /House products -->
+        
+        
+                </div>
+                <!-- /Container -->
+            </div>";s:4:"code";N;s:5:"title";s:23:"Colección de servicios";s:3:"url";s:22:"/coleccion-lista/:slug";s:6:"layout";s:7:"portada";s:9:"is_hidden";s:1:"0";s:12:"CategoryPage";a:2:{s:4:"slug";s:11:"{{ :slug }}";s:13:"slug_required";s:1:"1";}s:11:"ProductList";a:1:{s:7:"sorting";s:2:"no";}}}
